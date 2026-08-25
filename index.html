@@ -714,7 +714,9 @@ a:focus-visible, .toggle:focus-visible, th:focus-visible {
       <p>Deuxième effet, souvent oublié : sur un Ryzen, deux barrettes en double canal rendent 10 à 15 % d&rsquo;images par seconde de plus qu&rsquo;une seule. Il faut donc demander au vendeur <b>si les 8 Go sont une barrette ou deux</b> — une seule barrette veut dire capacité <em>et</em> performance à récupérer, deux barrettes de 4 Go veulent dire remplacer plutôt que compléter.</p>
     </div>
     <div>
-      <h3>La disponibilité</h3>
+      <h3>Le coût d'un petit SSD</h3>
+      <p>Un SSD de 1 To d'occasion se négocie <b>60 à 120 €</b> autour de Lyon, 80 € en moyenne — le stockage a monté comme la mémoire. Mais l'arbitrage se pose rarement : Windows, Fortnite, Les Sims 4 avec quelques extensions, Minecraft et Roblox tiennent dans <b>130 à 150 Go</b>. Un SSD de 256 Go passe donc, avec une centaine de gigas de marge, et un disque dur secondaire absorbe le reste. C'est en dessous de 250 Go que le remplacement devient obligatoire plutôt que confortable.</p>
+      <h3 style="margin-top:18px">La disponibilité</h3>
       <p>Chaque annonce a été rouverte une par une pour y lire son état de transaction, que leboncoin affiche en bandeau sur la page mais ne transmet pas dans les résultats de recherche : « Article vendu », « Un achat est en cours sur cet article », « Annonce actuellement en pause ». Six annonces vendues ont été retirées du tableau. Les deux qui portent <span class="chip deal">achat en cours</span> y restent, en rouge : une réservation peut échouer, mais il ne faut pas compter dessus.</p>
       <p>Le texte des annonces, lui, ne sert à rien pour ça : aucune ne mentionne « réservé » ou « sous réserve », et sur les 27 occurrences du mot « vendu », 23 sont le verbe — « vendu sans écran », « vendu avec clavier ». Seul le bandeau est fiable.</p>
       <h3 style="margin-top:18px">L&rsquo;ancienneté</h3>
@@ -750,7 +752,7 @@ const ROWS = [
   {id:3141475341, age:198, p:300, cpu:"Core i7-4790K", old:1, gpu:"GTX 1070 8 Go", idx:62, ram:16, sto:"SSD 250 Go", sf:"small", city:"Genas", km:29, pro:0, note:"Tour seule, alimentation 650 W, mémoire DDR3."},
   {id:3239770162, age:30, p:370, cpu:"Core i7-6700K", old:1, gpu:"RTX 2060 6 Go", idx:72, ram:16, sto:"SSD 240 Go + HDD 1 To", sf:"small", city:"Lyon", km:21, pro:1, note:"Reconditionné pro, garanti 1 an. Passage en SSD 480 Go proposé à +40 €."},
   {id:3191674127, age:43, p:340, cpu:"Core i5-7400", old:1, gpu:"GTX 1660 Ti 6 Go", idx:65, ram:12, sto:"SSD 512 Go (2×256)", sf:"ok", city:"Lyon", km:21, pro:1, note:"Vendeur pro. 12 Go de RAM et un CPU 4 cœurs / 4 threads."},
-  {id:3254002831, age:4, p:300, cpu:"Core i5-9400F", old:0, gpu:"GTX 1660 6 Go", idx:57, ram:16, sto:"SSD 256 Go + HDD 500 Go", sf:"small", city:"Givors", km:9, pro:0, note:"La plus proche de Mornant. Un SSD de 1 To à 50 € en fait la machine idéale."},
+  {id:3254002831, age:4, p:300, cpu:"Core i5-9400F", old:0, gpu:"GTX 1660 6 Go", idx:57, ram:16, sto:"SSD 256 Go + HDD 500 Go", sf:"small", city:"Givors", km:9, pro:0, note:"La plus proche de Mornant, 16 Go et carte de génération courante. Carte mère MSI B365M, alimentation 600 W de marque non précisée, montage de 2019. Les 256 Go de SSD suffisent aux quatre jeux visés."},
   {id:3218908440, deal:"achat", age:68, p:350, cpu:"Ryzen 3 3200G", old:0, gpu:"GTX 1660 Super 6 Go", idx:63, ram:16, sto:"NVMe, capacité non annoncée", sf:"unknown", city:"Saint-Étienne", km:30, pro:0, note:"CPU 4 cœurs mais récent. Demander la taille du NVMe."},
   {id:3100345624, age:274, p:349, cpu:"Core i7-7700", old:1, gpu:"GTX 1070 8 Go", idx:62, ram:16, sto:"Non annoncé", sf:"unknown", city:"Saint-Symphorien-d'Ozon", km:15, pro:0, note:"Annonce recopiée d'une fiche constructeur : aucun disque mentionné, deux ports M.2 libres."},
   {id:3199347989, age:20, p:360, cpu:"Core i7-7700", old:1, gpu:"GTX 1660 Super 6 Go", idx:63, ram:16, sto:"SSD 512 Go + HDD 1 To", sf:"ok", city:"Lyon", km:21, pro:1, note:"Reconditionné par un pro : la carte la plus sûre du tableau si la garantie compte."},
@@ -886,8 +888,8 @@ const PICKS = [
    caveat:"Vendue sans câble d'alimentation, et carte Pascal aux pilotes figés."},
   {role:"La plus proche", id:3254002831, p:300, city:"Givors", km:9, age:"4 jours",
    conf:"Core i5-9400F · GTX 1660 6 Go<br>16 Go · SSD 256 Go + HDD 500 Go",
-   why:"Neuf kilomètres, donc un essai sur place facile et un retour possible si un problème apparaît. Le processeur et la carte sont exactement dans la cible, et la carte est de génération courante.",
-   caveat:"SSD de 256 Go : ajouter un 1 To (≈ 50 €) pour arriver à 350 € au total."},
+   why:"Neuf kilomètres, donc un essai sur place facile et un recours réel si un problème apparaît. 16 Go déjà installés, carte de génération courante aux pilotes suivis, et rien à racheter pour jouer : c'est le coût total le plus bas du tableau.",
+   caveat:"SSD de 256 Go : suffisant pour ces quatre jeux, mais sans marge. Vérifier la marque de l'alimentation sur place."},
   {role:"La plus durable", id:3254975076, p:399, city:"Saint-Priest", km:22, age:"3 jours",
    conf:"Ryzen 7 1700X · RTX 3050<br>16 Go · SSD 1 To PNY",
    why:"Huit cœurs, une carte RTX avec DLSS, 1 To de SSD et une alimentation be quiet! 600 W : tous les critères durs sont cochés sans exception, et l'annonce est fraîche. La RTX 3060 à 400 € du même quartier serait meilleure, mais un achat y est déjà en cours.",
