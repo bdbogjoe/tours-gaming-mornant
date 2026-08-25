@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="61 tours PC gaming a vendre autour de Mornant entre 250 et 430 EUR, classees au rapport puissance/prix, avec composants et alertes stockage.">
+<meta name="description" content="99 tours PC gaming disponibles autour de Mornant jusqu'a 500 EUR, classees au rapport puissance/prix, avec etat de disponibilite et anciennete de chaque annonce.">
 <meta name="color-scheme" content="light dark">
 <meta property="og:title" content="Tours Gaming autour de Mornant">
-<meta property="og:description" content="61 tours PC gaming a vendre autour de Mornant entre 250 et 430 EUR, classees au rapport puissance/prix, avec composants et alertes stockage.">
+<meta property="og:description" content="99 tours PC gaming disponibles autour de Mornant jusqu'a 500 EUR, classees au rapport puissance/prix, avec etat de disponibilite et anciennete de chaque annonce.">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='88'%3E%F0%9F%96%A5%EF%B8%8F%3C/text%3E%3C/svg%3E">
 <title>Tours Gaming autour de Mornant</title>
@@ -285,6 +285,20 @@ a.go {
 }
 a.go:hover, a.go:focus-visible { color: var(--accent-ink); }
 
+/* ---------- verdict ---------- */
+
+.verdict {
+  border-left: 2px solid var(--accent);
+  padding: 2px 0 2px 20px;
+  margin: 0 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 74ch;
+}
+.verdict p { margin: 0; font-size: 14.5px; color: var(--ink-2); }
+.verdict b { color: var(--ink); font-weight: 600; }
+
 /* ---------- controls ---------- */
 
 .controls {
@@ -447,6 +461,40 @@ td.link { width: 52px; }
 .chip.pro { background: var(--accent-soft); color: var(--accent-ink); }
 .chip.old { background: var(--warn-soft); color: var(--warn); }
 .chip.ok { background: var(--ok-soft); color: var(--ok); }
+.chip.legacy { background: var(--crit-soft); color: var(--crit); }
+.chip.dlss { background: var(--ok-soft); color: var(--ok); }
+
+.chip.deal {
+  background: var(--crit);
+  color: #fff;
+  letter-spacing: .06em;
+}
+:root[data-theme="dark"] .chip.deal { color: #160907; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .chip.deal { color: #160907; }
+}
+tbody tr.deal { background: linear-gradient(90deg, var(--crit) 0 3px, transparent 3px); }
+tbody tr.deal:hover { background: linear-gradient(90deg, var(--crit) 0 3px, var(--surface-2) 3px); }
+
+td.age { width: 96px; white-space: nowrap; }
+.agechip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 11.5px;
+  font-variant-numeric: tabular-nums;
+}
+.agechip .dot { width: 7px; height: 7px; border-radius: 50%; flex: none; }
+.agechip.neuve   .dot { background: var(--ok); }
+.agechip.recente .dot { background: var(--accent); }
+.agechip.ancienne .dot { background: var(--warn); }
+.agechip.dormante .dot { background: var(--crit); }
+.agechip.inconnue .dot { background: var(--ink-3); }
+.agechip.neuve    { color: var(--ok); font-weight: 600; }
+.agechip.ancienne { color: var(--warn); }
+.agechip.dormante { color: var(--crit); }
+.agechip.recente, .agechip.inconnue { color: var(--ink-2); }
 
 .dim { color: var(--ink-3); }
 .empty {
@@ -533,27 +581,45 @@ a:focus-visible, .toggle:focus-visible, th:focus-visible {
 <div class="wrap">
 
   <header class="masthead">
-    <div class="eyebrow">leboncoin · 25 août 2026 · 40 km autour de Mornant</div>
-    <h1>Une tour gaming pour ado, entre 300 et 400 €</h1>
-    <p class="standfirst">61 tours de jeu vendues autour de Mornant, dépouillées annonce par annonce et classées au rapport puissance GPU / prix. Pour Fortnite, Roblox, Minecraft et Les Sims en 1080p, presque toutes les cartes de ce tableau suffisent — ce qui départage vraiment, c&rsquo;est la taille du SSD, la quantité de RAM et l&rsquo;âge du processeur.</p>
+    <div class="eyebrow">leboncoin · 25 août 2026 · 50 km autour de Mornant</div>
+    <h1>Une tour gaming pour ado, jusqu&rsquo;à 500 €</h1>
+    <p class="standfirst">99 tours de jeu à vendre autour de Mornant, dépouillées annonce par annonce et classées au rapport puissance GPU / prix. Le résultat le plus utile de ce relevé n&rsquo;est pas un classement mais un tri de disponibilité : sur 105 machines conformes, <b>6 étaient déjà vendues et 2 avaient un achat en cours</b> — leur état de transaction n&rsquo;apparaît que sur la page de l&rsquo;annonce, jamais dans les résultats de recherche. Et <b>36 des 99 restantes sont en ligne depuis plus de six mois</b> sans trouver preneur. Trier sur la colonne d&rsquo;ancienneté avant de regarder les prix fait gagner beaucoup de temps.</p>
     <dl class="brief">
-      <div><dt>Budget</dt><dd>300 – 400 €</dd></div>
-      <div><dt>Fourchette scrutée</dt><dd>250 – 450 €</dd></div>
-      <div><dt>Annonces lues</dt><dd>190</dd></div>
-      <div><dt>Retenues</dt><dd>61</dd></div>
-      <div><dt>Écartées</dt><dd>12</dd></div>
+      <div><dt>Budget</dt><dd>jusqu&rsquo;à 500 €</dd></div>
+      <div><dt>Fourchette scrutée</dt><dd>250 – 500 €</dd></div>
+      <div><dt>Rayon</dt><dd>50 km</dd></div>
+      <div><dt>Annonces lues</dt><dd>290</dd></div>
+      <div><dt>Disponibles</dt><dd>99</dd></div>
+      <div><dt>Fraîches &lt; 2 mois</dt><dd>38</dd></div>
+      <div><dt>Écartées</dt><dd>65</dd></div>
     </dl>
   </header>
 
   <section>
-    <h2>Les quatre à contacter en premier</h2>
-    <p class="sec-note">Le classement brut récompense la puissance par euro. Ces quatre-là intègrent en plus ce qui compte pour l&rsquo;usage réel : un SSD assez grand, 16 Go de RAM, un processeur pas trop daté et un trajet raisonnable.</p>
+    <h2>Le meilleur rapport puissance / prix sous 400 €</h2>
+    <p class="sec-note">Ces quatre-là ajoutent au score brut ce qui compte pour l&rsquo;usage réel : un SSD assez grand, 16 Go de RAM, un processeur pas trop daté et un trajet raisonnable. Elles reposent presque toutes sur des cartes Pascal, dont les pilotes ne reçoivent plus d&rsquo;optimisations. Avec 500 € de budget, la section suivante donne un classement nettement meilleur — celle-ci reste la réponse si l&rsquo;objectif est de dépenser le moins possible.</p>
     <div class="picks" id="picks"></div>
   </section>
 
   <section>
+    <h2>RTX obligatoire ? GTX trop vieilles ?</h2>
+    <p class="sec-note">Deux questions distinctes, et deux réponses différentes : la première ne tient pas pour ces quatre jeux, la seconde est le meilleur argument du lot — mais elle ne condamne pas toutes les GTX.</p>
+    <div class="verdict">
+      <p><b>Une RTX n&rsquo;est pas nécessaire pour ces quatre jeux.</b> Roblox tourne sur un chipset intégré, Les Sims 4 date de 2014, et Fortnite se joue en mode Performance chez tous ceux qui cherchent des images par seconde, pas en mode Lumen. Une GTX 1060 6 Go tient déjà les 100 images/s sur les quatre. Sur Fortnite, le goulot d&rsquo;étranglement est le processeur, pas la carte : un 4 cœurs / 4 threads de 2013 bridera la machine bien avant elle.</p>
+      <p><b>« Les GTX sont trop vieilles » : vrai pour les GTX 900 et 1000, faux pour les GTX 1600.</b> Le partage ne se fait pas sur le nom mais sur l&rsquo;architecture. Les GTX 900 (960, 970, 980) et GTX 1000 (1050, 1060, 1070, 1080) sont des puces Maxwell et Pascal de 2014-2016, que NVIDIA a basculées en support de sécurité seul : plus aucune optimisation pour les jeux à venir. Côté AMD, les RX 400, 500 et 590 sont dans le même cas. Ce sont elles qui portent l&rsquo;étiquette <span class="chip legacy">pilotes figés</span> dans le tableau.</p>
+      <p><b>Les GTX 1650, 1660, 1660 Super et 1660 Ti, elles, sont de 2019</b> — même génération Turing que les RTX 2000, encore pleinement suivies par les pilotes. Il leur manque seulement le DLSS. Les mettre dans le même panier que les GTX 900 serait une erreur : ce sont les mêmes puces que les RTX 2060, amputées des cœurs de calcul dédiés.</p>
+      <p><b>Le vrai critère est donc l&rsquo;année de l&rsquo;architecture, pas la lettre.</b> Le filtre « carte de 2019 ou plus récente » du tableau applique exactement ça : il garde les GTX 1600, les RTX, les RX 5500/5600 et les RX 6000, et écarte tout le reste.</p>
+      <p><b>Et c&rsquo;est le passage à 500 € qui règle l&rsquo;arbitrage.</b> Sous 400 €, exiger une carte récente coûtait de la puissance brute : la meilleure option conforme était une GTX 1660 Super, très en dessous de la GTX 1070 Ti trouvée à 300 €. À 500 €, la contradiction disparaît — le palier fait apparaître des RTX 3060 Ti, une RTX 4060 et une RX 6600 XT, qui battent les Pascal <em>et</em> sont suivies par les pilotes <em>et</em> ont le DLSS ou le FSR. Les 100 € supplémentaires n&rsquo;achètent pas 25 % de machine en plus : ils font changer de catégorie.</p>
+      <p><b>Avec un bémol de taille : ces trois affaires-là sont des mirages.</b> La RTX 4060 à 500 € est en ligne depuis 15 mois, la RTX 3060 Ti de Lyon depuis 2 ans, la RX 6600 XT depuis 2 ans également. Une tour de jeu correctement prixée part en quelques jours dans l&rsquo;agglomération lyonnaise ; une annonce renouvelée pendant deux ans signifie soit que le vendeur ne répond plus, soit qu&rsquo;il y a quelque chose que l&rsquo;annonce ne dit pas.</p>
+      <p><b>La démonstration par les faits :</b> la RTX 3060 à 425 € de Rive-de-Gier, à 11 km — le meilleur matériel du relevé à cette distance — a été vendue pendant la constitution de ce tableau, comme la RTX 3050 de Saint-Priest et la GTX 1070 de Saint-Just. Et la RTX 3060 à 400 €, parue le jour même, avait déjà un achat en cours. Les cartes ci-dessous ne retiennent donc que des annonces disponibles, de moins de deux mois.</p>
+    </div>
+    <p class="sec-note" style="margin-top:26px">Les cinq meilleures machines qui passent ce filtre <em>et</em> le SSD de 500 Go <em>et</em> les 16 Go de RAM <em>et</em> les deux mois d&rsquo;ancienneté, sans aucune réserve à lever :</p>
+    <div class="picks" id="rtxpicks"></div>
+  </section>
+
+  <section>
     <h2>Classement complet <span class="count" id="tcount"></span></h2>
-    <p class="sec-note">Trié par défaut sur le score puissance/prix. Cliquez un en-tête pour changer de tri. La barre orange à gauche d&rsquo;une ligne signale un stockage problématique : SSD sous 500 Go, disque dur seul, ou capacité non annoncée.</p>
+    <p class="sec-note">Trié par défaut sur le score puissance/prix. Cliquez un en-tête pour changer de tri — <b>« en ligne depuis » est le tri le plus utile pour ne contacter que des annonces vivantes.</b> La barre orange à gauche d&rsquo;une ligne signale un stockage problématique : SSD sous 500 Go, disque dur seul, ou capacité non annoncée.</p>
     <div class="controls">
       <span class="lbl">Filtres</span>
       <label class="toggle"><input type="checkbox" id="f-sto"> SSD ≥ 500 Go garanti</label>
@@ -561,6 +627,10 @@ a:focus-visible, .toggle:focus-visible, th:focus-visible {
       <label class="toggle"><input type="checkbox" id="f-km"> À moins de 25 km</label>
       <label class="toggle"><input type="checkbox" id="f-cpu"> Processeur récent</label>
       <label class="toggle"><input type="checkbox" id="f-budget"> Dans le budget 300–400 €</label>
+      <label class="toggle"><input type="checkbox" id="f-gpu"> Niveau RTX 2060 ou mieux</label>
+      <label class="toggle"><input type="checkbox" id="f-gen"> Carte de 2019 ou plus récente</label>
+      <label class="toggle"><input type="checkbox" id="f-age"> En ligne depuis moins de 2 mois</label>
+      <label class="toggle"><input type="checkbox" id="f-deal"> Sans achat en cours</label>
     </div>
     <div class="tablewrap">
       <table>
@@ -574,6 +644,7 @@ a:focus-visible, .toggle:focus-visible, th:focus-visible {
             <th class="sortable" data-k="ram">RAM<span class="arrow">▾</span></th>
             <th>Stockage</th>
             <th class="sortable" data-k="km">Ville<span class="arrow">▾</span></th>
+            <th class="sortable" data-k="age">En ligne depuis<span class="arrow">▾</span></th>
             <th>Remarques</th>
             <th></th>
           </tr>
@@ -584,19 +655,30 @@ a:focus-visible, .toggle:focus-visible, th:focus-visible {
   </section>
 
   <section>
-    <h2>Écartées <span class="count">12 annonces</span></h2>
-    <p class="sec-note">Ces annonces sortaient des critères : vendues, sans SSD, sans liste de composants exploitable, ou avec une carte graphique qui n&rsquo;est pas une carte de jeu.</p>
+    <h2>Écartées <span class="count">65 annonces</span></h2>
+    <p class="sec-note">Ces annonces sortaient des critères : vendues, sans SSD, sans liste de composants exploitable, ou avec une carte graphique qui n&rsquo;est pas une carte de jeu. Les cas particuliers d&rsquo;abord, puis les motifs de masse.</p>
     <div class="excl" id="excl"></div>
   </section>
 
   <div class="method">
     <div>
       <h3>Le score</h3>
-      <p><code>indice GPU ÷ prix × 1000</code>. L&rsquo;indice GPU est une échelle de performance relative en 1080p (RX 460 = 18, GTX 1060 6 Go = 45, GTX 1660 = 57, RTX 2060 = 72, RTX 3060 = 95). Un score de 200 veut dire « beaucoup de carte graphique pour l&rsquo;argent », pas « bonne machine » : un SSD de 120 Go ou un processeur de 2012 ne pénalisent pas le score, ils apparaissent en remarque.</p>
+      <p><code>indice GPU ÷ prix × 1000</code>. L&rsquo;indice GPU est une échelle de performance relative en 1080p (RX 460 = 18, GTX 1060 6 Go = 45, GTX 1660 = 57, RTX 2060 = 72, RX 6600 = 88, RTX 3060 = 95, RTX 3060 Ti = 112, RTX 4060 = 118). Un score de 200 veut dire « beaucoup de carte graphique pour l&rsquo;argent », pas « bonne machine » : un SSD de 120 Go ou un processeur de 2012 ne pénalisent pas le score, ils apparaissent en remarque.</p>
     </div>
     <div>
       <h3>Le confort de jeu</h3>
       <p>La pastille à côté de la carte graphique situe les quatre jeux visés en 1080p. <span class="chip ample">ample</span> tient largement et gardera de la marge ; <span class="chip suffisant">suffisant</span> fait tourner les quatre jeux sans souci ; <span class="chip juste">juste</span> passe mais sans réserve, surtout sur Fortnite.</p>
+    </div>
+    <div>
+      <h3>La disponibilité</h3>
+      <p>Chaque annonce a été rouverte une par une pour y lire son état de transaction, que leboncoin affiche en bandeau sur la page mais ne transmet pas dans les résultats de recherche : « Article vendu », « Un achat est en cours sur cet article », « Annonce actuellement en pause ». Six annonces vendues ont été retirées du tableau. Les deux qui portent <span class="chip deal">achat en cours</span> y restent, en rouge : une réservation peut échouer, mais il ne faut pas compter dessus.</p>
+      <p>Le texte des annonces, lui, ne sert à rien pour ça : aucune ne mentionne « réservé » ou « sous réserve », et sur les 27 occurrences du mot « vendu », 23 sont le verbe — « vendu sans écran », « vendu avec clavier ». Seul le bandeau est fiable.</p>
+      <h3 style="margin-top:18px">L&rsquo;ancienneté</h3>
+      <p>Un cycle de publication dure environ deux mois. Au-delà, le vendeur a renouvelé son annonce sans trouver preneur : <span class="agechip neuve"><span class="dot"></span>≤ 14 j</span> vient de paraître · <span class="agechip recente"><span class="dot"></span>15–60 j</span> premier cycle · <span class="agechip ancienne"><span class="dot"></span>2–6 mois</span> renouvelée · <span class="agechip dormante"><span class="dot"></span>&gt; 6 mois</span> invendue de longue date.</p>
+    </div>
+    <div>
+      <h3>Les générations</h3>
+      <p><span class="chip legacy">pilotes figés</span> marque les architectures Maxwell, Pascal et Polaris — GTX 900, GTX 1000, RX 400/500/590 — que NVIDIA et AMD ne servent plus qu&rsquo;en correctifs de sécurité. <span class="chip dlss">dlss</span> marque les cartes RTX, seules à disposer de la mise à l&rsquo;échelle par apprentissage. Les GTX 1600 sont dans l&rsquo;entre-deux : génération 2019 encore suivie, mais sans DLSS.</p>
     </div>
     <div>
       <h3>La distance</h3>
@@ -605,7 +687,7 @@ a:focus-visible, .toggle:focus-visible, th:focus-visible {
     <div>
       <h3>Ce que le tableau ne dit pas</h3>
       <p>Les composants viennent de la description rédigée par le vendeur : ni vérifiés, ni testés. « Non précisé » veut dire que l&rsquo;annonce reste muette — à demander avant de se déplacer, au même titre que la marque de l&rsquo;alimentation et l&rsquo;état des ventilateurs.</p>
-      <p>14 autres annonces conformes existent entre 430 et 450 €, hors budget, et ne sont pas listées.</p>
+      <p>Dans la tranche 440 – 500 €, seules les machines à carte de génération courante sont listées. 12 annonces conformes y reposent sur une carte Pascal ou Polaris : à ce prix, elles sont dominées par les RTX 3060 Ti et la RTX 4060 du même palier, et ne sont donc pas reprises.</p>
     </div>
   </div>
 
@@ -615,67 +697,109 @@ a:focus-visible, .toggle:focus-visible, th:focus-visible {
 const GPU_TIER = i => i >= 57 ? "ample" : i >= 38 ? "suffisant" : "juste";
 
 const ROWS = [
-  {id:3256284454, p:400, cpu:"Ryzen 5 3600", old:0, gpu:"RTX 3060 12 Go", idx:95, ram:8, sto:"SSD 1 To", sf:"ok", city:"Saint-Priest", km:22, pro:0, note:"Le meilleur GPU du lot, et de loin. Seulement 8 Go de RAM : prévoir une barrette."},
-  {id:2997676155, p:300, cpu:"Core i5-8600K", old:0, gpu:"GTX 1070 Ti 8 Go", idx:70, ram:16, sto:"SSD 500 Go + HDD 2 To", sf:"ok", city:"Lyon", km:20, pro:0, note:"Tout coche : 6 cœurs récents, SSD suffisant, 100 € sous le haut du budget. Sans écran ni périphériques."},
-  {id:3254605133, p:350, cpu:"Ryzen 7 1700X", old:0, gpu:"GTX 1080 8 Go", idx:78, ram:16, sto:"SSD 1 To + HDD 2 To", sf:"ok", city:"Lyon", km:21, pro:0, note:"8 cœurs, 3 To de stockage. Vendu sans câble d'alimentation."},
-  {id:2957405301, p:350, cpu:"Core i7-6700", old:1, gpu:"GTX 1080 8 Go", idx:78, ram:16, sto:"SSD 256 Go", sf:"small", city:"Villefranche-sur-Saône", km:41, pro:0, note:"Grosse carte, petit SSD, et 41 km de route."},
-  {id:2978150166, p:285, cpu:"Core i5-3570K", old:1, gpu:"GTX 1070 8 Go", idx:62, ram:16, sto:"SSD 120 Go + HDD 1 To", sf:"small", city:"Lyon", km:20, pro:0, note:"Processeur de 2012 en 4 cœurs / 4 threads : c'est lui qui bridera Fortnite, pas la carte."},
-  {id:3182093490, p:300, cpu:"Core i5-7500", old:1, gpu:"GTX 1660 Ti 6 Go", idx:65, ram:16, sto:"SSD 400 Go", sf:"small", city:"Bourgoin-Jallieu", km:48, pro:0, note:"Excellent rapport, mais 4 cœurs / 4 threads et le trajet le plus long du tableau."},
-  {id:3141475341, p:300, cpu:"Core i7-4790K", old:1, gpu:"GTX 1070 8 Go", idx:62, ram:16, sto:"SSD 250 Go", sf:"small", city:"Genas", km:29, pro:0, note:"Tour seule, alimentation 650 W, mémoire DDR3."},
-  {id:3144825704, p:350, cpu:"Core i5-9400F", old:0, gpu:"RTX 2060 6 Go", idx:72, ram:32, sto:"SSD 447 Go + HDD 1,8 To", sf:"small", city:"Pont-de-Chéruy", km:41, pro:0, note:"32 Go de RAM, SSD qui manque 53 Go pour cocher la case."},
-  {id:3239770162, p:370, cpu:"Core i7-6700K", old:1, gpu:"RTX 2060 6 Go", idx:72, ram:16, sto:"SSD 240 Go + HDD 1 To", sf:"small", city:"Lyon", km:21, pro:1, note:"Reconditionné pro, garanti 1 an. Passage en SSD 480 Go proposé à +40 €."},
-  {id:3236701870, p:325, cpu:"Core i5-10600K", old:0, gpu:"GTX 1070 8 Go", idx:62, ram:16, sto:"SSD 1 To + HDD 1 To", sf:"ok", city:"Saint-Just-Saint-Rambert", km:36, pro:0, note:"Le processeur le plus récent à ce niveau de prix. 36 km."},
-  {id:3191674127, p:340, cpu:"Core i5-7400", old:1, gpu:"GTX 1660 Ti 6 Go", idx:65, ram:12, sto:"SSD 512 Go (2×256)", sf:"ok", city:"Lyon", km:21, pro:1, note:"Vendeur pro. 12 Go de RAM et un CPU 4 cœurs / 4 threads."},
-  {id:3254002831, p:300, cpu:"Core i5-9400F", old:0, gpu:"GTX 1660 6 Go", idx:57, ram:16, sto:"SSD 256 Go + HDD 500 Go", sf:"small", city:"Givors", km:9, pro:0, note:"La plus proche de Mornant. Un SSD de 1 To à 50 € en fait la machine idéale."},
-  {id:3218908440, p:350, cpu:"Ryzen 3 3200G", old:0, gpu:"GTX 1660 Super 6 Go", idx:63, ram:16, sto:"NVMe, capacité non annoncée", sf:"unknown", city:"Saint-Étienne", km:30, pro:0, note:"CPU 4 cœurs mais récent. Demander la taille du NVMe."},
-  {id:3100345624, p:349, cpu:"Core i7-7700", old:1, gpu:"GTX 1070 8 Go", idx:62, ram:16, sto:"Non annoncé", sf:"unknown", city:"Saint-Symphorien-d'Ozon", km:15, pro:0, note:"Annonce recopiée d'une fiche constructeur : aucun disque mentionné, deux ports M.2 libres."},
-  {id:3199347989, p:360, cpu:"Core i7-7700", old:1, gpu:"GTX 1660 Super 6 Go", idx:63, ram:16, sto:"SSD 512 Go + HDD 1 To", sf:"ok", city:"Lyon", km:21, pro:1, note:"Reconditionné par un pro : la carte la plus sûre du tableau si la garantie compte."},
-  {id:3116072864, p:340, cpu:"Core i7-6700K", old:1, gpu:"GTX 980 Ti 6 Go", idx:58, ram:16, sto:"Non annoncé", sf:"unknown", city:"Villeurbanne", km:24, pro:0, note:"Écran Asus VG248QE 144 Hz inclus dans le prix. Stockage à faire préciser."},
-  {id:3254975076, p:399, cpu:"Ryzen 7 1700X", old:0, gpu:"RTX 3050", idx:68, ram:16, sto:"SSD 1 To PNY", sf:"ok", city:"Saint-Priest", km:22, pro:0, note:"Alimentation be quiet! 600 W, carte RTX compatible DLSS. Rien à reprendre."},
-  {id:3228023881, p:430, cpu:"Core i5-9400F", old:0, gpu:"RTX 2060 6 Go", idx:72, ram:16, sto:"NVMe 512 Go", sf:"ok", city:"Lyon", km:21, pro:1, note:"Reconditionné pro, alim be quiet! 600 W Bronze. 30 € au-dessus du budget."},
-  {id:3255677220, p:400, cpu:"Core i7-10700F", old:0, gpu:"GTX 1660 Super 6 Go", idx:63, ram:16, sto:"SSD 500 Go", sf:"ok", city:"Saint-Étienne", km:29, pro:0, note:"8 cœurs / 16 threads : le processeur le plus costaud du tableau."},
-  {id:3140023840, p:400, cpu:"Core i5-4440", old:1, gpu:"GTX 1660 Super 6 Go", idx:63, ram:16, sto:"SSD 480 Go + HDD 1 To", sf:"small", city:"Sablons", km:34, pro:0, note:"Bonne carte plombée par un processeur de 2013 en 4 cœurs / 4 threads."},
-  {id:3125951859, p:400, cpu:"Core i7-6700", old:1, gpu:"GTX 1070 8 Go", idx:62, ram:16, sto:"SSD 256 Go + HDD 1 To", sf:"small", city:"Villefontaine", km:37, pro:0, note:"Machine de marque, alimentation externe d'origine."},
-  {id:3227447367, p:370, cpu:"Ryzen 5 2600X", old:0, gpu:"GTX 1660 6 Go", idx:57, ram:16, sto:"SSD 256 Go + HDD 1 To", sf:"small", city:"Givors", km:9, pro:0, note:"L'autre annonce à 9 km. SSD Samsung 830 un peu juste et vieillissant."},
-  {id:3177694043, p:340, cpu:"Core i5-10400F", old:0, gpu:"RX 5500 XT", idx:52, ram:16, sto:"SSD 1 To", sf:"ok", city:"Lyon", km:21, pro:0, note:"Configuration récente et cohérente, annonce laconique."},
-  {id:3206699556, p:340, cpu:"Ryzen 5 3600X", old:0, gpu:"GTX 1650 Super", idx:52, ram:16, sto:"SSD 512 Go", sf:"ok", city:"Lyon", km:21, pro:0, note:"Coche tous les critères durs sans exception. Carte modeste mais large pour ces jeux."},
-  {id:3252985709, p:300, cpu:"Ryzen 5 2400", old:0, gpu:"RX 580 8 Go", idx:46, ram:16, sto:"SSD 500 Go (neuf)", sf:"ok", city:"Vienne", km:19, pro:0, note:"SSD annoncé neuf, alimentation 600 W."},
-  {id:3252987139, p:300, cpu:"Ryzen 5", old:0, gpu:"RX 580 8 Go", idx:46, ram:null, sto:"SSD NVMe, capacité non annoncée", sf:"unknown", city:"Vienne", km:19, pro:0, note:"Annonce jumelle de la précédente, même vendeur : c'est probablement la même machine."},
-  {id:3159586166, p:300, cpu:"Core i5 (réf. incohérente)", old:1, gpu:"GTX 980 4 Go", idx:45, ram:null, sto:"SSD 256 Go + SSD 500 Go", sf:"ok", city:"Annonay", km:42, pro:0, note:"Le vendeur écrit « i5 5500 », qui n'existe pas. 756 Go de SSD, aucun disque mécanique."},
-  {id:2974967855, p:300, cpu:"Core i5-8600K", old:0, gpu:"GTX 980 4 Go", idx:45, ram:16, sto:"SSD Samsung, capacité non annoncée", sf:"unknown", city:"Saint-Étienne", km:29, pro:0, note:"Très bon processeur. Carte de 2014, sans DLSS ni ray-tracing."},
-  {id:3048568405, p:300, cpu:"Core i5-8400", old:0, gpu:"GTX 1060 6 Go", idx:45, ram:16, sto:"SSD 480 Go + HDD 2 To", sf:"small", city:"Lentilly", km:23, pro:0, note:"Le titre annonce une GTX 1660, la description une 1060 : à clarifier. Écran 144 Hz inclus."},
-  {id:3243737866, p:299, cpu:"Core i5-8400", old:0, gpu:"GTX 1060 6 Go", idx:45, ram:8, sto:"SSD + HDD ≈ 1,1 To (part SSD inconnue)", sf:"unknown", city:"Mions", km:23, pro:0, note:"MSI Aegis 3 sous Windows 11. Le vendeur ne donne que le total."},
-  {id:3245620448, p:299, cpu:"Core i5-3470", old:1, gpu:"GTX 1060 6 Go", idx:45, ram:8, sto:"SSD Crucial MX100 512 Go", sf:"ok", city:"Lyon", km:20, pro:0, note:"Clavier et souris Corsair inclus. Processeur de 2012 en 4 cœurs / 4 threads."},
-  {id:3235918348, p:400, cpu:"Core i7-9700", old:0, gpu:"GTX 1660 6 Go", idx:57, ram:16, sto:"SSD 223 Go + HDD 931 Go", sf:"small", city:"Oullins-Pierre-Bénite", km:15, pro:0, note:"Proche, 8 cœurs, annonce très détaillée — seul le SSD déçoit."},
-  {id:3215548402, p:400, cpu:"Core i5-6400", old:1, gpu:"GTX 1660 6 Go", idx:57, ram:8, sto:"SSD 447 Go", sf:"small", city:"Vénissieux", km:19, pro:0, note:"4 cœurs / 4 threads et 8 Go de RAM pour 400 € : cher payé."},
-  {id:3130516712, p:315, cpu:"Core i5-8600", old:0, gpu:"GTX 1060 6 Go", idx:45, ram:16, sto:"SSD NVMe 500 Go + HDD 1 To", sf:"ok", city:"Lyon", km:20, pro:0, note:"Aucun défaut : 6 cœurs récents, SSD NVMe de 500 Go, 16 Go, et 315 €."},
-  {id:3198735866, p:350, cpu:"Ryzen 5", old:0, gpu:"RX 6500 XT", idx:50, ram:32, sto:"SSD 100 Go", sf:"small", city:"Rive-de-Gier", km:11, pro:0, note:"Deux vis manquantes, carte mère à rebrancher, et le vendeur reconnaît « presque pas d'espace de stockage »."},
-  {id:3216421211, p:275, cpu:"Core i7-4790K", old:1, gpu:"GTX 1650 4 Go", idx:38, ram:16, sto:"SSD Samsung 980 1 To", sf:"ok", city:"Bron", km:23, pro:0, note:"Le vendeur cite lui-même Fortnite et Minecraft. Mémoire DDR3, 1 To de SSD."},
-  {id:3045572242, p:300, cpu:"Core i7-3770K", old:1, gpu:"RX 570 4 Go", idx:40, ram:32, sto:"SSD 256 Go + HDD 1 To", sf:"small", city:"Rillieux-la-Pape", km:29, pro:0, note:"32 Go de DDR3. Le vendeur ne sait pas encore quelle alimentation il a."},
-  {id:3101972112, p:295, cpu:"Non annoncé", old:1, gpu:"GTX 970 4 Go", idx:38, ram:16, sto:"SSD 250 Go + HDD 1 To", sf:"small", city:"Fontaines-Saint-Martin", km:29, pro:0, note:"Aucun processeur annoncé, et une alimentation de 280 à 400 W un peu limite."},
-  {id:3218084329, p:350, cpu:"Ryzen 7 1700X", old:0, gpu:"GTX 1060 6 Go", idx:45, ram:16, sto:"SSD 1 To + SSD 250 Go + HDD 1 To", sf:"ok", city:"Lyon", km:19, pro:0, note:"8 cœurs et 2,25 To dont 1,25 To de SSD."},
-  {id:3243685668, p:360, cpu:"Ryzen 5", old:0, gpu:"RX 580 8 Go", idx:46, ram:8, sto:"SSD 128 Go", sf:"small", city:"Lucenay", km:33, pro:0, note:"Le vendeur cible explicitement Fortnite et Rocket League, mais 128 Go ne suffiront pas."},
-  {id:3039647559, p:300, cpu:"Non annoncé", old:1, gpu:"GTX 970 4 Go", idx:38, ram:16, sto:"SSD 222 Go", sf:"small", city:"Lyon", km:20, pro:0, note:"Aucun processeur annoncé. Alimentation Corsair 650 W, échanges acceptés."},
-  {id:3110848865, p:350, cpu:"Core i5-10400", old:0, gpu:"RX 480 8 Go", idx:44, ram:16, sto:"SSD NVMe 2 To", sf:"ok", city:"Lyon", km:20, pro:0, note:"Le meilleur stockage et la meilleure alimentation du tableau (Corsair RM750x). Carte de 2016."},
-  {id:3245620291, p:369, cpu:"Core i7-7700", old:1, gpu:"GTX 1060 6 Go", idx:45, ram:8, sto:"SSD 128 Go + HDD 1 To", sf:"small", city:"Morancé", km:31, pro:0, note:"8 Go de RAM et 128 Go de SSD pour 369 €."},
-  {id:3038372291, p:430, cpu:"Ryzen 5 5500", old:0, gpu:"GTX 1650 Super", idx:52, ram:16, sto:"SSD 250 Go + HDD 1 To", sf:"small", city:"Saint-Chamond", km:20, pro:0, note:"Processeur récent, mais 30 € au-dessus du budget et un SSD de 250 Go."},
-  {id:3251053651, p:360, cpu:"Ryzen 5 5600G", old:0, gpu:"RX 6400", idx:42, ram:16, sto:"SSD 128 Go", sf:"small", city:"Chassieu", km:27, pro:0, note:"Processeur récent, mais la RX 6400 est faible et 128 Go tiennent à peine Windows et deux jeux."},
-  {id:3222614988, p:400, cpu:"Ryzen 3 3300X", old:0, gpu:"RX 580 8 Go", idx:46, ram:16, sto:"SSD 240 Go", sf:"small", city:"Lyon", km:21, pro:0, note:"Base MEGAPORT dont le vendeur a changé carte, processeur, mémoire et alimentation."},
-  {id:3180228962, p:350, cpu:"Xeon E5-2630 v2", old:1, gpu:"RX 570 4 Go", idx:40, ram:16, sto:"Non annoncé", sf:"unknown", city:"Vénissieux", km:19, pro:0, note:"Xeon de serveur de 2013 : beaucoup de cœurs lents, mauvais pour le jeu."},
-  {id:3197856522, p:400, cpu:"Ryzen 5 2600X", old:0, gpu:"GTX 1060 6 Go", idx:45, ram:16, sto:"SSD, capacité non annoncée", sf:"unknown", city:"Bron", km:23, pro:0, note:"Configuration correcte, prix haut pour ce qu'elle offre."},
-  {id:3245058687, p:400, cpu:"Ryzen 5 PRO 4650G", old:0, gpu:"GTX 1650 4 Go", idx:38, ram:8, sto:"SSD SATA 480 Go", sf:"small", city:"Chazelles-sur-Lyon", km:22, pro:0, note:"8 Go de RAM et une GTX 1650 pour 400 € : le plus mauvais rapport du haut de fourchette."},
-  {id:3083484901, p:400, cpu:"Ryzen 5 4600G", old:0, gpu:"GTX 1650 4 Go", idx:38, ram:16, sto:"Description contradictoire", sf:"unknown", city:"Lyon", km:21, pro:0, note:"L'annonce mélange « disque dur 128 Go SSD » et 1 To : à faire préciser."},
-  {id:3155397748, p:300, cpu:"Core i5-4460", old:1, gpu:"GTX 960 2 Go", idx:28, ram:8, sto:"SSD 128 Go + HDD 1 To", sf:"small", city:"Lyon", km:21, pro:0, note:"Le vendeur promet Fortnite, Roblox et Minecraft, mais carte et processeur datent de 2014."},
-  {id:3147570941, p:415, cpu:"Ryzen 5 3600", old:0, gpu:"GTX 1650 4 Go", idx:38, ram:16, sto:"SSD 240 Go + HDD 2 To", sf:"small", city:"Saint-Genis-Laval", km:13, pro:0, note:"Très proche et bon processeur, mais 415 € pour une GTX 1650 c'est trop."},
-  {id:3113172099, p:270, cpu:"Ryzen 5 2600", old:0, gpu:"RX 460", idx:18, ram:16, sto:"SSD 250 Go + HDD 1 To", sf:"small", city:"Lyon", km:21, pro:0, note:"La RX 460 rame déjà sur Fortnite : la seule carte du tableau vraiment insuffisante."},
-  {id:2971024197, p:420, cpu:"Xeon E3-1240 v2", old:1, gpu:"GTX 770 2 Go", idx:24, ram:32, sto:"SSD Samsung, capacité non annoncée", sf:"unknown", city:"Lyon", km:21, pro:0, note:"Plateforme de 2012 et carte de 2013 pour 420 €. À laisser passer."},
-  {id:3161782749, p:310, cpu:"Ryzen 5 2600", old:0, gpu:"GTX 1660 Super 6 Go", idx:63, ram:16, sto:"Non annoncé — Windows à installer", sf:"unknown", city:"Saint-Étienne", km:29, pro:0, note:"Très bon matériel au bon prix, mais rien sur le disque : à vérifier avant tout le reste."},
-  {id:3164510012, p:250, cpu:"Core i7-4790K", old:1, gpu:"GTX 970 4 Go", idx:38, ram:16, sto:"SSD Samsung 850 EVO 500 Go", sf:"ok", city:"Villeurbanne", km:24, pro:0, note:"Sous le budget et tout coche : SSD 500 Go, 16 Go, alimentation Seasonic 650 W."},
-  {id:3083564477, p:250, cpu:"Ryzen 3 2200G", old:1, gpu:"RX 570 4 Go", idx:40, ram:16, sto:"2 × SSD 500 Go (1 To)", sf:"ok", city:"Villefranche-sur-Saône", km:41, pro:0, note:"1 To en SSD pour 250 €. Processeur 4 cœurs / 4 threads, alimentation de marque obscure."},
-  {id:3188067356, p:250, cpu:"Ryzen 5 1600", old:0, gpu:"GTX 1060 6 Go", idx:45, ram:16, sto:"SSD 256 Go + HDD 1 To", sf:"small", city:"Villeurbanne", km:24, pro:0, note:"6 cœurs et une GTX 1060 pour 250 € : il ne manque que du SSD."},
-  {id:3003263646, p:250, cpu:"Core i7-6700K", old:1, gpu:"GTX 1060", idx:45, ram:16, sto:"SSD 117 Go + HDD 1,81 To", sf:"small", city:"Caluire-et-Cuire", km:24, pro:0, note:"Tour complète. Le vendeur donne l'espace libre plutôt que les capacités."},
-  {id:3234109131, p:250, cpu:"Xeon 6 cœurs (non identifié)", old:1, gpu:"RX 580 8 Go", idx:46, ram:8, sto:"Non annoncé", sf:"unknown", city:"Villeurbanne", km:24, pro:0, note:"Tour Provonto annoncée à l'état neuf, mais le Xeon n'est pas identifié et le disque pas mentionné."},
-  {id:3203006261, p:250, cpu:"Core i5-6500T", old:1, gpu:"GTX 1050 Ti 4 Go", idx:26, ram:16, sto:"SSD 250 Go + HDD 1 To", sf:"small", city:"Lyon", km:21, pro:1, note:"Reconditionné pro garanti 1 an. Le « T » est une version basse consommation, donc bridée."}
+  {id:3256284454, deal:"achat", age:0, p:400, cpu:"Ryzen 5 3600", old:0, gpu:"RTX 3060 12 Go", idx:95, ram:8, sto:"SSD 1 To", sf:"ok", city:"Saint-Priest", km:22, pro:0, note:"Le meilleur GPU du lot, et de loin. Seulement 8 Go de RAM : prévoir une barrette."},
+  {id:2997676155, age:454, p:300, cpu:"Core i5-8600K", old:0, gpu:"GTX 1070 Ti 8 Go", idx:70, ram:16, sto:"SSD 500 Go + HDD 2 To", sf:"ok", city:"Lyon", km:20, pro:0, note:"Tout coche : 6 cœurs récents, SSD suffisant, 100 € sous le haut du budget. Sans écran ni périphériques."},
+  {id:3254605133, age:3, p:350, cpu:"Ryzen 7 1700X", old:0, gpu:"GTX 1080 8 Go", idx:78, ram:16, sto:"SSD 1 To + HDD 2 To", sf:"ok", city:"Lyon", km:21, pro:0, note:"8 cœurs, 3 To de stockage. Vendu sans câble d'alimentation."},
+  {id:2957405301, age:522, p:350, cpu:"Core i7-6700", old:1, gpu:"GTX 1080 8 Go", idx:78, ram:16, sto:"SSD 256 Go", sf:"small", city:"Villefranche-sur-Saône", km:41, pro:0, note:"Grosse carte, petit SSD, et 41 km de route."},
+  {id:2978150166, age:487, p:285, cpu:"Core i5-3570K", old:1, gpu:"GTX 1070 8 Go", idx:62, ram:16, sto:"SSD 120 Go + HDD 1 To", sf:"small", city:"Lyon", km:20, pro:0, note:"Processeur de 2012 en 4 cœurs / 4 threads : c'est lui qui bridera Fortnite, pas la carte."},
+  {id:3182093490, age:128, p:300, cpu:"Core i5-7500", old:1, gpu:"GTX 1660 Ti 6 Go", idx:65, ram:16, sto:"SSD 400 Go", sf:"small", city:"Bourgoin-Jallieu", km:48, pro:0, note:"Excellent rapport, mais 4 cœurs / 4 threads et le trajet le plus long du tableau."},
+  {id:3141475341, age:198, p:300, cpu:"Core i7-4790K", old:1, gpu:"GTX 1070 8 Go", idx:62, ram:16, sto:"SSD 250 Go", sf:"small", city:"Genas", km:29, pro:0, note:"Tour seule, alimentation 650 W, mémoire DDR3."},
+  {id:3239770162, age:30, p:370, cpu:"Core i7-6700K", old:1, gpu:"RTX 2060 6 Go", idx:72, ram:16, sto:"SSD 240 Go + HDD 1 To", sf:"small", city:"Lyon", km:21, pro:1, note:"Reconditionné pro, garanti 1 an. Passage en SSD 480 Go proposé à +40 €."},
+  {id:3191674127, age:43, p:340, cpu:"Core i5-7400", old:1, gpu:"GTX 1660 Ti 6 Go", idx:65, ram:12, sto:"SSD 512 Go (2×256)", sf:"ok", city:"Lyon", km:21, pro:1, note:"Vendeur pro. 12 Go de RAM et un CPU 4 cœurs / 4 threads."},
+  {id:3254002831, age:4, p:300, cpu:"Core i5-9400F", old:0, gpu:"GTX 1660 6 Go", idx:57, ram:16, sto:"SSD 256 Go + HDD 500 Go", sf:"small", city:"Givors", km:9, pro:0, note:"La plus proche de Mornant. Un SSD de 1 To à 50 € en fait la machine idéale."},
+  {id:3218908440, deal:"achat", age:68, p:350, cpu:"Ryzen 3 3200G", old:0, gpu:"GTX 1660 Super 6 Go", idx:63, ram:16, sto:"NVMe, capacité non annoncée", sf:"unknown", city:"Saint-Étienne", km:30, pro:0, note:"CPU 4 cœurs mais récent. Demander la taille du NVMe."},
+  {id:3100345624, age:274, p:349, cpu:"Core i7-7700", old:1, gpu:"GTX 1070 8 Go", idx:62, ram:16, sto:"Non annoncé", sf:"unknown", city:"Saint-Symphorien-d'Ozon", km:15, pro:0, note:"Annonce recopiée d'une fiche constructeur : aucun disque mentionné, deux ports M.2 libres."},
+  {id:3199347989, age:20, p:360, cpu:"Core i7-7700", old:1, gpu:"GTX 1660 Super 6 Go", idx:63, ram:16, sto:"SSD 512 Go + HDD 1 To", sf:"ok", city:"Lyon", km:21, pro:1, note:"Reconditionné par un pro : la carte la plus sûre du tableau si la garantie compte."},
+  {id:3116072864, age:247, p:340, cpu:"Core i7-6700K", old:1, gpu:"GTX 980 Ti 6 Go", idx:58, ram:16, sto:"Non annoncé", sf:"unknown", city:"Villeurbanne", km:24, pro:0, note:"Écran Asus VG248QE 144 Hz inclus dans le prix. Stockage à faire préciser."},
+  {id:3254975076, age:3, p:399, cpu:"Ryzen 7 1700X", old:0, gpu:"RTX 3050", idx:68, ram:16, sto:"SSD 1 To PNY", sf:"ok", city:"Saint-Priest", km:22, pro:0, note:"Alimentation be quiet! 600 W, carte RTX compatible DLSS. Rien à reprendre."},
+  {id:3228023881, age:51, p:430, cpu:"Core i5-9400F", old:0, gpu:"RTX 2060 6 Go", idx:72, ram:16, sto:"NVMe 512 Go", sf:"ok", city:"Lyon", km:21, pro:1, note:"Reconditionné pro, alim be quiet! 600 W Bronze. 30 € au-dessus du budget."},
+  {id:3255677220, age:1, p:400, cpu:"Core i7-10700F", old:0, gpu:"GTX 1660 Super 6 Go", idx:63, ram:16, sto:"SSD 500 Go", sf:"ok", city:"Saint-Étienne", km:29, pro:0, note:"8 cœurs / 16 threads : le processeur le plus costaud du tableau."},
+  {id:3140023840, age:201, p:400, cpu:"Core i5-4440", old:1, gpu:"GTX 1660 Super 6 Go", idx:63, ram:16, sto:"SSD 480 Go + HDD 1 To", sf:"small", city:"Sablons", km:34, pro:0, note:"Bonne carte plombée par un processeur de 2013 en 4 cœurs / 4 threads."},
+  {id:3125951859, age:null, p:400, cpu:"Core i7-6700", old:1, gpu:"GTX 1070 8 Go", idx:62, ram:16, sto:"SSD 256 Go + HDD 1 To", sf:"small", city:"Villefontaine", km:37, pro:0, note:"Machine de marque, alimentation externe d'origine."},
+  {id:3227447367, age:52, p:370, cpu:"Ryzen 5 2600X", old:0, gpu:"GTX 1660 6 Go", idx:57, ram:16, sto:"SSD 256 Go + HDD 1 To", sf:"small", city:"Givors", km:9, pro:0, note:"L'autre annonce à 9 km. SSD Samsung 830 un peu juste et vieillissant."},
+  {id:3177694043, age:136, p:340, cpu:"Core i5-10400F", old:0, gpu:"RX 5500 XT", idx:52, ram:16, sto:"SSD 1 To", sf:"ok", city:"Lyon", km:21, pro:0, note:"Configuration récente et cohérente, annonce laconique."},
+  {id:3206699556, age:88, p:340, cpu:"Ryzen 5 3600X", old:0, gpu:"GTX 1650 Super", idx:52, ram:16, sto:"SSD 512 Go", sf:"ok", city:"Lyon", km:21, pro:0, note:"Coche tous les critères durs sans exception. Carte modeste mais large pour ces jeux."},
+  {id:3252985709, age:6, p:300, cpu:"Ryzen 5 2400", old:0, gpu:"RX 580 8 Go", idx:46, ram:16, sto:"SSD 500 Go (neuf)", sf:"ok", city:"Vienne", km:19, pro:0, note:"SSD annoncé neuf, alimentation 600 W."},
+  {id:3159586166, age:168, p:300, cpu:"Core i5 (réf. incohérente)", old:1, gpu:"GTX 980 4 Go", idx:45, ram:null, sto:"SSD 256 Go + SSD 500 Go", sf:"ok", city:"Annonay", km:42, pro:0, note:"Le vendeur écrit « i5 5500 », qui n'existe pas. 756 Go de SSD, aucun disque mécanique."},
+  {id:2974967855, age:493, p:300, cpu:"Core i5-8600K", old:0, gpu:"GTX 980 4 Go", idx:45, ram:16, sto:"SSD Samsung, capacité non annoncée", sf:"unknown", city:"Saint-Étienne", km:29, pro:0, note:"Très bon processeur. Carte de 2014, sans DLSS ni ray-tracing."},
+  {id:3048568405, age:359, p:300, cpu:"Core i5-8400", old:0, gpu:"GTX 1060 6 Go", idx:45, ram:16, sto:"SSD 480 Go + HDD 2 To", sf:"small", city:"Lentilly", km:23, pro:0, note:"Le titre annonce une GTX 1660, la description une 1060 : à clarifier. Écran 144 Hz inclus."},
+  {id:3243737866, age:23, p:299, cpu:"Core i5-8400", old:0, gpu:"GTX 1060 6 Go", idx:45, ram:8, sto:"SSD + HDD ≈ 1,1 To (part SSD inconnue)", sf:"unknown", city:"Mions", km:23, pro:0, note:"MSI Aegis 3 sous Windows 11. Le vendeur ne donne que le total."},
+  {id:3245620448, age:18, p:299, cpu:"Core i5-3470", old:1, gpu:"GTX 1060 6 Go", idx:45, ram:8, sto:"SSD Crucial MX100 512 Go", sf:"ok", city:"Lyon", km:20, pro:0, note:"Clavier et souris Corsair inclus. Processeur de 2012 en 4 cœurs / 4 threads."},
+  {id:3235918348, age:36, p:400, cpu:"Core i7-9700", old:0, gpu:"GTX 1660 6 Go", idx:57, ram:16, sto:"SSD 223 Go + HDD 931 Go", sf:"small", city:"Oullins-Pierre-Bénite", km:15, pro:0, note:"Proche, 8 cœurs, annonce très détaillée — seul le SSD déçoit."},
+  {id:3215548402, age:73, p:400, cpu:"Core i5-6400", old:1, gpu:"GTX 1660 6 Go", idx:57, ram:8, sto:"SSD 447 Go", sf:"small", city:"Vénissieux", km:19, pro:0, note:"4 cœurs / 4 threads et 8 Go de RAM pour 400 € : cher payé."},
+  {id:3130516712, age:218, p:315, cpu:"Core i5-8600", old:0, gpu:"GTX 1060 6 Go", idx:45, ram:16, sto:"SSD NVMe 500 Go + HDD 1 To", sf:"ok", city:"Lyon", km:20, pro:0, note:"Aucun défaut : 6 cœurs récents, SSD NVMe de 500 Go, 16 Go, et 315 €."},
+  {id:3198735866, age:102, p:350, cpu:"Ryzen 5", old:0, gpu:"RX 6500 XT", idx:50, ram:32, sto:"SSD 100 Go", sf:"small", city:"Rive-de-Gier", km:11, pro:0, note:"Deux vis manquantes, carte mère à rebrancher, et le vendeur reconnaît « presque pas d'espace de stockage »."},
+  {id:3216421211, age:72, p:275, cpu:"Core i7-4790K", old:1, gpu:"GTX 1650 4 Go", idx:38, ram:16, sto:"SSD Samsung 980 1 To", sf:"ok", city:"Bron", km:23, pro:0, note:"Le vendeur cite lui-même Fortnite et Minecraft. Mémoire DDR3, 1 To de SSD."},
+  {id:3045572242, age:364, p:300, cpu:"Core i7-3770K", old:1, gpu:"RX 570 4 Go", idx:40, ram:32, sto:"SSD 256 Go + HDD 1 To", sf:"small", city:"Rillieux-la-Pape", km:29, pro:0, note:"32 Go de DDR3. Le vendeur ne sait pas encore quelle alimentation il a."},
+  {id:3101972112, age:271, p:295, cpu:"Non annoncé", old:1, gpu:"GTX 970 4 Go", idx:38, ram:16, sto:"SSD 250 Go + HDD 1 To", sf:"small", city:"Fontaines-Saint-Martin", km:29, pro:0, note:"Aucun processeur annoncé, et une alimentation de 280 à 400 W un peu limite."},
+  {id:3218084329, age:70, p:350, cpu:"Ryzen 7 1700X", old:0, gpu:"GTX 1060 6 Go", idx:45, ram:16, sto:"SSD 1 To + SSD 250 Go + HDD 1 To", sf:"ok", city:"Lyon", km:19, pro:0, note:"8 cœurs et 2,25 To dont 1,25 To de SSD."},
+  {id:3243685668, age:23, p:360, cpu:"Ryzen 5", old:0, gpu:"RX 580 8 Go", idx:46, ram:8, sto:"SSD 128 Go", sf:"small", city:"Lucenay", km:33, pro:0, note:"Le vendeur cible explicitement Fortnite et Rocket League, mais 128 Go ne suffiront pas."},
+  {id:3039647559, age:376, p:300, cpu:"Non annoncé", old:1, gpu:"GTX 970 4 Go", idx:38, ram:16, sto:"SSD 222 Go", sf:"small", city:"Lyon", km:20, pro:0, note:"Aucun processeur annoncé. Alimentation Corsair 650 W, échanges acceptés."},
+  {id:3110848865, age:257, p:350, cpu:"Core i5-10400", old:0, gpu:"RX 480 8 Go", idx:44, ram:16, sto:"SSD NVMe 2 To", sf:"ok", city:"Lyon", km:20, pro:0, note:"Le meilleur stockage et la meilleure alimentation du tableau (Corsair RM750x). Carte de 2016."},
+  {id:3245620291, age:19, p:369, cpu:"Core i7-7700", old:1, gpu:"GTX 1060 6 Go", idx:45, ram:8, sto:"SSD 128 Go + HDD 1 To", sf:"small", city:"Morancé", km:31, pro:0, note:"8 Go de RAM et 128 Go de SSD pour 369 €."},
+  {id:3038372291, age:378, p:430, cpu:"Ryzen 5 5500", old:0, gpu:"GTX 1650 Super", idx:52, ram:16, sto:"SSD 250 Go + HDD 1 To", sf:"small", city:"Saint-Chamond", km:20, pro:0, note:"Processeur récent, mais 30 € au-dessus du budget et un SSD de 250 Go."},
+  {id:3251053651, age:9, p:360, cpu:"Ryzen 5 5600G", old:0, gpu:"RX 6400", idx:42, ram:16, sto:"SSD 128 Go", sf:"small", city:"Chassieu", km:27, pro:0, note:"Processeur récent, mais la RX 6400 est faible et 128 Go tiennent à peine Windows et deux jeux."},
+  {id:3222614988, age:61, p:400, cpu:"Ryzen 3 3300X", old:0, gpu:"RX 580 8 Go", idx:46, ram:16, sto:"SSD 240 Go", sf:"small", city:"Lyon", km:21, pro:0, note:"Base MEGAPORT dont le vendeur a changé carte, processeur, mémoire et alimentation."},
+  {id:3180228962, age:132, p:350, cpu:"Xeon E5-2630 v2", old:1, gpu:"RX 570 4 Go", idx:40, ram:16, sto:"Non annoncé", sf:"unknown", city:"Vénissieux", km:19, pro:0, note:"Xeon de serveur de 2013 : beaucoup de cœurs lents, mauvais pour le jeu."},
+  {id:3197856522, age:103, p:400, cpu:"Ryzen 5 2600X", old:0, gpu:"GTX 1060 6 Go", idx:45, ram:16, sto:"SSD, capacité non annoncée", sf:"unknown", city:"Bron", km:23, pro:0, note:"Configuration correcte, prix haut pour ce qu'elle offre."},
+  {id:3245058687, age:20, p:400, cpu:"Ryzen 5 PRO 4650G", old:0, gpu:"GTX 1650 4 Go", idx:38, ram:8, sto:"SSD SATA 480 Go", sf:"small", city:"Chazelles-sur-Lyon", km:22, pro:0, note:"8 Go de RAM et une GTX 1650 pour 400 € : le plus mauvais rapport du haut de fourchette."},
+  {id:3083484901, age:300, p:400, cpu:"Ryzen 5 4600G", old:0, gpu:"GTX 1650 4 Go", idx:38, ram:16, sto:"Description contradictoire", sf:"unknown", city:"Lyon", km:21, pro:0, note:"L'annonce mélange « disque dur 128 Go SSD » et 1 To : à faire préciser."},
+  {id:3155397748, age:174, p:300, cpu:"Core i5-4460", old:1, gpu:"GTX 960 2 Go", idx:28, ram:8, sto:"SSD 128 Go + HDD 1 To", sf:"small", city:"Lyon", km:21, pro:0, note:"Le vendeur promet Fortnite, Roblox et Minecraft, mais carte et processeur datent de 2014."},
+  {id:3147570941, age:187, p:415, cpu:"Ryzen 5 3600", old:0, gpu:"GTX 1650 4 Go", idx:38, ram:16, sto:"SSD 240 Go + HDD 2 To", sf:"small", city:"Saint-Genis-Laval", km:13, pro:0, note:"Très proche et bon processeur, mais 415 € pour une GTX 1650 c'est trop."},
+  {id:3113172099, age:253, p:270, cpu:"Ryzen 5 2600", old:0, gpu:"RX 460", idx:18, ram:16, sto:"SSD 250 Go + HDD 1 To", sf:"small", city:"Lyon", km:21, pro:0, note:"La RX 460 rame déjà sur Fortnite : la seule carte du tableau vraiment insuffisante."},
+  {id:2971024197, age:500, p:420, cpu:"Xeon E3-1240 v2", old:1, gpu:"GTX 770 2 Go", idx:24, ram:32, sto:"SSD Samsung, capacité non annoncée", sf:"unknown", city:"Lyon", km:21, pro:0, note:"Plateforme de 2012 et carte de 2013 pour 420 €. À laisser passer."},
+  {id:3164510012, age:159, p:250, cpu:"Core i7-4790K", old:1, gpu:"GTX 970 4 Go", idx:38, ram:16, sto:"SSD Samsung 850 EVO 500 Go", sf:"ok", city:"Villeurbanne", km:24, pro:0, note:"Sous le budget et tout coche : SSD 500 Go, 16 Go, alimentation Seasonic 650 W."},
+  {id:3083564477, age:300, p:250, cpu:"Ryzen 3 2200G", old:1, gpu:"RX 570 4 Go", idx:40, ram:16, sto:"2 × SSD 500 Go (1 To)", sf:"ok", city:"Villefranche-sur-Saône", km:41, pro:0, note:"1 To en SSD pour 250 €. Processeur 4 cœurs / 4 threads, alimentation de marque obscure."},
+  {id:3188067356, age:119, p:250, cpu:"Ryzen 5 1600", old:0, gpu:"GTX 1060 6 Go", idx:45, ram:16, sto:"SSD 256 Go + HDD 1 To", sf:"small", city:"Villeurbanne", km:24, pro:0, note:"6 cœurs et une GTX 1060 pour 250 € : il ne manque que du SSD."},
+  {id:3003263646, age:444, p:250, cpu:"Core i7-6700K", old:1, gpu:"GTX 1060", idx:45, ram:16, sto:"SSD 117 Go + HDD 1,81 To", sf:"small", city:"Caluire-et-Cuire", km:24, pro:0, note:"Tour complète. Le vendeur donne l'espace libre plutôt que les capacités."},
+  {id:3234109131, age:40, p:250, cpu:"Xeon 6 cœurs (non identifié)", old:1, gpu:"RX 580 8 Go", idx:46, ram:8, sto:"Non annoncé", sf:"unknown", city:"Villeurbanne", km:24, pro:0, note:"Tour Provonto annoncée à l'état neuf, mais le Xeon n'est pas identifié et le disque pas mentionné."},
+  {id:3203006261, age:29, p:250, cpu:"Core i5-6500T", old:1, gpu:"GTX 1050 Ti 4 Go", idx:26, ram:16, sto:"SSD 250 Go + HDD 1 To", sf:"small", city:"Lyon", km:21, pro:1, note:"Reconditionné pro garanti 1 an. Le « T » est une version basse consommation, donc bridée."},
+
+  /* ---- apport du passage de 40 à 50 km ---- */
+  {id:3182060691, age:129, p:399, cpu:"Core i5-6600K", old:1, gpu:"RTX 2060 Super 8 Go", idx:82, ram:16, sto:"Non annoncé", sf:"unknown", city:"Feyzin", km:16, pro:0, note:"Grosse carte dans le budget. Le vendeur confond stockage et mémoire dans son annonce, et le i5-6600K est un 4 cœurs / 4 threads de 2015."},
+  {id:3231196358, age:45, p:310, cpu:"Ryzen 3 3300X", old:0, gpu:"GTX 1660 Super 6 Go", idx:63, ram:16, sto:"SSD 525 Go + SSD 120 Go + HDD 1 To", sf:"ok", city:"Lyon", km:19, pro:0, note:"Windows 11 Pro, 1,6 To dont 645 Go de SSD. Rien à reprendre pour 310 €."},
+  {id:3255638538, age:2, p:450, cpu:"Core i5-12400F", old:0, gpu:"RX 6600", idx:88, ram:16, sto:"SSD NVMe 500 Go", sf:"ok", city:"Villeurbanne", km:24, pro:0, note:"La machine la plus moderne du tableau : processeur de 2022, carte au niveau d'une RTX 3060. Clavier et souris Logitech inclus, état neuf."},
+  {id:3213032734, age:78, p:450, cpu:"Core i5-9400F", old:0, gpu:"RTX 2060 6 Go", idx:72, ram:16, sto:"SSD M.2 500 Go + HDD 500 Go", sf:"ok", city:"Lyon", km:21, pro:0, note:"La seule RTX 2060 du lot dont tous les critères sont vérifiés, sans réserve."},
+  {id:3241307521, age:27, p:450, cpu:"Core i7-6700K", old:1, gpu:"GTX 1080 8 Go", idx:78, ram:16, sto:"SSD PNY 512 Go + HDD 1 To", sf:"ok", city:"Caluire-et-Cuire", km:24, pro:0, note:"GTX 1080 complète et bien alimentée (LDLC 650 W Bronze)."},
+  {id:3233479342, age:41, p:450, cpu:"Core i5-9600K", old:0, gpu:"RTX 2060 6 Go", idx:72, ram:16, sto:"À confirmer", sf:"unknown", city:"Lyon", km:20, pro:0, note:"Monté en 2020, mémoire 3200 MHz en dual channel. Stockage à faire préciser."},
+  {id:3224328483, age:58, p:450, cpu:"Ryzen 5 2600", old:0, gpu:"RTX 2060 6 Go", idx:72, ram:16, sto:"Non annoncé", sf:"unknown", city:"Lyon", km:21, pro:1, note:"Reconditionné par un pro, donc garanti, mais l'annonce ne dit rien du disque."},
+  {id:2923604668, age:580, p:450, cpu:"Core i5-9400F", old:0, gpu:"RTX 2060 6 Go", idx:72, ram:16, sto:"SSD 120 Go + HDD 1 To", sf:"small", city:"Lyon", km:20, pro:0, note:"SSD Samsung 840 Pro de 120 Go : à remplacer d'emblée."},
+  {id:2942714221, age:547, p:450, cpu:"Core i5-8600K", old:0, gpu:"RX 5600 XT", idx:66, ram:16, sto:"SSD 120 Go + HDD 2 To", sf:"small", city:"Artas", km:40, pro:0, note:"Le vendeur écrit « rtx 5600 xt » : c'est une RX 5600 XT, donc sans DLSS. Alim Corsair 650 W Gold."},
+  {id:3112989105, age:253, p:400, cpu:"Ryzen 5 2600X", old:0, gpu:"GTX 1660 Super 6 Go", idx:63, ram:16, sto:"SSD SATA 240 Go + HDD 1 To", sf:"small", city:"Décines-Charpieu", km:28, pro:0, note:"Alimentation Seasonic 500 W Bronze, carte mère B450M."},
+  {id:3253668567, age:5, p:420, cpu:"Ryzen 5 2600", old:0, gpu:"GTX 1070 8 Go", idx:62, ram:16, sto:"SSD NVMe 256 Go", sf:"small", city:"Lyon", km:20, pro:0, note:"Aucun disque secondaire : 256 Go pour tout, c'est court."},
+  {id:3195253543, age:107, p:440, cpu:"Core i7-8700", old:0, gpu:"GTX 1070 8 Go", idx:62, ram:16, sto:"SSD 500 Go + SSD 250 Go + HDD 1 To", sf:"ok", city:"Salvizinet", km:34, pro:0, note:"6 cœurs / 12 threads et 1,75 To. Les disques seront remis à zéro."},
+  {id:3244802517, age:21, p:450, cpu:"Ryzen 5 5600X", old:0, gpu:"GTX 1070 8 Go", idx:62, ram:16, sto:"SSD 256 Go + SSD 512 Go (768 Go)", sf:"ok", city:"Clonas-sur-Varèze", km:25, pro:0, note:"Processeur de 2020 associé à une carte de 2016 : déséquilibré, mais tout est en SSD."},
+  {id:3253271242, age:5, p:450, cpu:"Core i7-4790K", old:1, gpu:"GTX 1070 8 Go", idx:62, ram:16, sto:"SSD 240 Go + HDD 2 To", sf:"small", city:"Meyzieu", km:31, pro:0, note:"Excellente alimentation (Corsair RM750 Gold modulaire) mais processeur de 2014."},
+  {id:2947198203, age:539, p:380, cpu:"Ryzen 5 5500", old:0, gpu:"RX 590", idx:48, ram:16, sto:"SSD 1 To", sf:"ok", city:"Meximieux", km:51, pro:0, note:"Processeur récent et 1 To de SSD, mais 51 km : le point le plus éloigné du relevé."},
+  {id:3215055065, age:74, p:450, cpu:"Core i3-9100F", old:1, gpu:"RX 580 8 Go", idx:46, ram:16, sto:"SSD 1 To + HDD 2 To", sf:"ok", city:"Rillieux-la-Pape", km:29, pro:0, note:"3 To dont 1 To de SSD, mais un i3 4 cœurs / 4 threads pour 450 €."},
+  {id:3070060236, age:323, p:450, cpu:"Ryzen 5 2600", old:0, gpu:"RX 580 8 Go", idx:46, ram:16, sto:"SSD, capacité non annoncée", sf:"unknown", city:"Brindas", km:12, pro:0, note:"Écran MSI incurvé inclus, et à 12 km. Cher pour la configuration seule."},
+  {id:3175053388, age:141, p:360, cpu:"Ryzen 5 2600", old:0, gpu:"GTX 1060 6 Go", idx:45, ram:16, sto:"SSD 240 Go + HDD", sf:"small", city:"Lyon", km:21, pro:0, note:"Capacité du disque dur non annoncée."},
+  {id:3039128153, age:377, p:280, cpu:"Core i7-3770", old:1, gpu:"RX 570 8 Go", idx:40, ram:8, sto:"SSD 256 Go + HDD 1 To", sf:"small", city:"Ruy-Montceau", km:50, pro:0, note:"Base HP avec refroidissement be quiet!. 8 Go de RAM et 50 km."},
+  {id:3240943494, age:28, p:260, cpu:"Core i5-6500", old:1, gpu:"GTX 1060 3 Go", idx:38, ram:16, sto:"À confirmer", sf:"unknown", city:"Lyon", km:21, pro:1, note:"Reconditionné pro. La version 3 Go de la GTX 1060 est sensiblement plus lente que la 6 Go."},
+
+  /* ---- tranche 455 – 500 €, cartes de génération courante uniquement ---- */
+  {id:2997576873, age:454, p:500, cpu:"Core i5-10400F", old:0, gpu:"RTX 4060", idx:118, ram:16, sto:"SSD NVMe 1 To", sf:"ok", city:"Lyon", km:20, pro:0, note:"La carte la plus récente du relevé (2023) : DLSS 3 avec génération d'images, que rien d'autre ici ne sait faire. Machine utilisée six mois."},
+  {id:2841745670, age:717, p:500, cpu:"Core i5-11600K", old:0, gpu:"RTX 3060 Ti", idx:112, ram:16, sto:"SSD NVMe Samsung 980 500 Go", sf:"ok", city:"Lyon", km:20, pro:0, note:"Tour Top Achat NOBELIUM sous Windows 11, ventirad be quiet! Dark Rock Slim. Ensemble cohérent de bout en bout."},
+  {id:3186282399, age:122, p:500, cpu:"Ryzen 5 3600", old:0, gpu:"RTX 3060 Ti", idx:112, ram:16, sto:"SSD NVMe WD SN550 500 Go", sf:"ok", city:"Sury-le-Comtal", km:39, pro:0, note:"Achetée 1 200 € il y a 18 mois, état neuf, non négociable. Alimentation Aerocool, la pièce la plus faible. Écran, clavier et souris pour 200 € de plus."},
+  {id:2812466993, age:746, p:500, cpu:"Core i5-10400F", old:0, gpu:"RX 6600 XT", idx:97, ram:16, sto:"SSD NVMe Crucial P2 500 Go", sf:"ok", city:"Fontaines-Saint-Martin", km:29, pro:0, note:"Équivalente à une RTX 3060 côté performances, avec FSR au lieu du DLSS. Tout est spécifié."},
+  {id:3088996123, age:290, p:500, cpu:"Ryzen 7 5700G", old:0, gpu:"RTX 3060 12 Go", idx:95, ram:16, sto:"SSD 954 Go", sf:"ok", city:"Lyon", km:20, pro:0, note:"Le meilleur couple processeur / carte du relevé : 8 cœurs de 2021 et 12 Go de mémoire vidéo. Annonce recopiée des informations système Windows."},
+  {id:3203987916, age:93, p:500, cpu:"Ryzen 5 4500", old:0, gpu:"RTX 3060", idx:95, ram:16, sto:"SSD 1 To", sf:"ok", city:"Communay", km:13, pro:0, note:"La plus proche des machines à carte récente. État annoncé « satisfaisant » seulement, et livrée avec un simple câble d'alimentation."},
+  {id:3250897374, age:9, p:490, cpu:"Core i7-10700", old:0, gpu:"RTX 3060 12 Go", idx:95, ram:32, sto:"À confirmer", sf:"unknown", city:"Caluire-et-Cuire", km:24, pro:0, note:"Dell Optiplex 7080 MT révisé, 8 cœurs, 32 Go. Deux cartes au choix (GTX 1660 S ou RTX 3060) : faire confirmer laquelle correspond au prix."},
+  {id:3227443573, age:52, p:480, cpu:"Core i5-8400", old:0, gpu:"RTX 2070 8 Go", idx:88, ram:16, sto:"SSD 578 Go", sf:"ok", city:"Firminy", km:39, pro:0, note:"Beaucoup de carte pour 480 €. Tout coche, mais 39 km."},
+  {id:3189054753, age:39, p:500, cpu:"Core i5-10400F", old:0, gpu:"RTX 2070 8 Go", idx:88, ram:16, sto:"NVMe 512 Go", sf:"ok", city:"Lyon", km:21, pro:1, note:"Reconditionné pro : facture et garantie. Alimentation Antec 650 W Gold. Ajout d'un disque de 1 To pour 20 €."},
+  {id:3011473168, age:429, p:500, cpu:"Core i3-12100F", old:0, gpu:"RTX 3050", idx:68, ram:16, sto:"SSD 500 Go", sf:"ok", city:"Lyon", km:20, pro:0, note:"Neuve, montée sur commande, garantie 6 mois. Le i3-12100F est un 4 cœurs de 2022 qui dépasse les i7 d'avant 2018 en jeu."},
+  {id:3254748364, age:3, p:455, cpu:"Ryzen 5 3600", old:0, gpu:"RTX 2060 6 Go", idx:72, ram:16, sto:"SSD 512 Go", sf:"ok", city:"Lyon", km:20, pro:0, note:"Montée par le vendeur, sous Windows 11. La RTX 2060 la moins chère qui coche tout."},
+  {id:3204180569, age:93, p:500, cpu:"Ryzen 5 3600", old:0, gpu:"RTX 2060 6 Go", idx:72, ram:16, sto:"SSD NVMe 500 Go + HDD 2 To", sf:"ok", city:"Sathonay-Camp", km:28, pro:0, note:"2,5 To au total, rien à reprendre sur le papier."},
+  {id:3163293878, age:161, p:500, cpu:"Core i5-9600K", old:0, gpu:"RTX 2060 6 Go", idx:72, ram:16, sto:"2 × SSD 240 Go + HDD 2 To", sf:"small", city:"Meyzieu", km:31, pro:0, note:"480 Go de SSD mais en deux volumes de 240 Go : aucun n'atteint 500 Go. Alim Corsair 650 W."},
+  {id:3161200542, age:165, p:480, cpu:"Ryzen 5 3600", old:0, gpu:"GTX 1660 Super 6 Go", idx:63, ram:16, sto:"SSD Samsung 970 EVO 500 Go + HDD 1 To", sf:"ok", city:"Bourgoin-Jallieu", km:48, pro:0, note:"Composants de qualité (970 EVO, Kingston Fury 3600 MHz) mais 48 km et pas de DLSS."},
+  {id:3253090489, age:6, p:500, cpu:"Ryzen 5 2600", old:0, gpu:"GTX 1660 Super 6 Go", idx:63, ram:16, sto:"À confirmer", sf:"unknown", city:"Caluire-et-Cuire", km:24, pro:0, note:"Vendue avec accessoires. Cher pour une GTX 1660 Super sans DLSS."},
+  {id:3207283805, age:87, p:500, cpu:"Core i5-8500", old:0, gpu:"GTX 1660 Ti 6 Go", idx:65, ram:16, sto:"SSD M.2 500 Go", sf:"ok", city:"Saint-Georges-d'Espéranche", km:32, pro:0, note:"Tout coche, mais 500 € pour une carte de 2019 sans DLSS alors qu'une RTX 3060 Ti se trouve au même prix."},
+  {id:2894500276, age:632, p:500, cpu:"Core i5-10400F", old:0, gpu:"GTX 1660 Ti 6 Go", idx:65, ram:16, sto:"SSD 250 Go + HDD 1 To", sf:"small", city:"Vénissieux", km:19, pro:0, note:"Proche, bon processeur, mais SSD de 250 Go et carte sans DLSS à 500 €."},
+  {id:3148253248, age:186, p:500, cpu:"Ryzen 5 3600X", old:0, gpu:"GTX 1650 Super", idx:52, ram:16, sto:"À confirmer", sf:"unknown", city:"Saint-Fons", km:18, pro:0, note:"Boîtier ASUS ROG. 500 € pour une GTX 1650 Super : le plus mauvais rapport de cette tranche."},
+  {id:2879308328, age:655, p:500, cpu:"Ryzen 5 3600", old:0, gpu:"GTX 1660 6 Go", idx:57, ram:16, sto:"SSD 120 Go + HDD", sf:"small", city:"Lyon", km:22, pro:0, note:"120 Go de SSD pour 500 €."},
+  {id:3246836106, age:17, p:500, cpu:"Core i5-11400F", old:0, gpu:"GTX 1650 4 Go", idx:38, ram:16, sto:"SSD 512 Go", sf:"ok", city:"L'Isle-d'Abeau", km:44, pro:0, note:"Processeur de 2021 associé à la carte la plus faible de la tranche. À éviter à ce prix."},
+  {id:2917944092, age:590, p:500, cpu:"Core i3-10100F", old:0, gpu:"GTX 1650 4 Go", idx:38, ram:16, sto:"SSD 111 Go + HDD 1 To", sf:"small", city:"Saint-Chamond", km:20, pro:0, note:"Alimentation de 450 W et 111 Go de SSD pour 500 € : à laisser passer."},
+  {id:3128326584, age:222, p:500, cpu:"Ryzen 5 3600X", old:0, gpu:"RTX 3060", idx:95, ram:8, sto:"À confirmer", sf:"unknown", city:"Villeneuve-de-Marc", km:37, pro:0, note:"8 Go de RAM en SO-DIMM (format portable) extensibles à 64 Go. Tapis Corsair inclus, stockage à faire préciser."}
 ];
 
 const EXCLUDED = [
@@ -690,30 +814,73 @@ const EXCLUDED = [
   {p:350, city:"Saint-Forgeux", why:"Annoncée « à réparer »"},
   {p:295, city:"Lucenay", why:"Stockage « sur demande »"},
   {p:300, city:"Vénissieux", why:"Aucun processeur annoncé"},
-  {p:400, city:"Anse", why:"Aucun processeur annoncé"}
+  {p:400, city:"Anse", why:"Aucun processeur annoncé"},
+  {p:250, city:"Lyon", why:"RTX 2060 mais aucun affichage : panne non résolue"},
+  {p:400, city:"Irigny", why:"RTX 2070, mais « vente séparée uniquement »"},
+  {p:450, city:"Lyon", why:"Annonce marquée « Vendu »"},
+  {p:310, city:"Saint-Étienne", why:"« Vendu sans SSD » en fin d'annonce"},
+  {p:350, city:"Pont-de-Chéruy", why:"Bandeau leboncoin : article vendu"},
+  {p:325, city:"Saint-Just-Saint-Rambert", why:"Bandeau leboncoin : article vendu"},
+  {p:460, city:"Belleville-en-Beaujolais", why:"Bandeau leboncoin : article vendu"},
+  {p:425, city:"Rive-de-Gier", why:"Bandeau leboncoin : article vendu"},
+  {p:300, city:"Vienne", why:"Bandeau leboncoin : article vendu"},
+  {p:480, city:"Saint-Priest", why:"Bandeau leboncoin : article vendu"}
+];
+
+/* Écartées automatiquement dans le périmètre 50 km, par motif. */
+const EXCLUDED_BULK = [
+  {n:34, why:"Aucun SSD mentionné dans l'annonce"},
+  {n:5,  why:"Annonce marquée vendue ou réservée"},
+  {n:2,  why:"Vendues explicitement sans stockage"},
+  {n:2,  why:"Composants vendus séparément"}
 ];
 
 const PICKS = [
-  {role:"Le meilleur achat", id:2997676155, p:300, city:"Lyon", km:20,
-   conf:"Core i5-8600K · GTX 1070 Ti 8 Go<br>16 Go · SSD 500 Go + HDD 2 To",
-   why:"La seule machine du tableau qui ne demande aucune dépense complémentaire, et elle laisse 100 € de marge dans le budget. Six cœurs de 2017, une carte largement au-dessus des besoins de ces quatre jeux, un SSD à la bonne taille.",
-   caveat:"Vendue nue : ni écran ni clavier."},
-  {role:"La plus proche", id:3254002831, p:300, city:"Givors", km:9,
+  {role:"Le meilleur achat", id:3254605133, p:350, city:"Lyon", km:21, age:"3 jours",
+   conf:"Ryzen 7 1700X · GTX 1080 8 Go<br>16 Go · SSD 1 To + HDD 2 To",
+   why:"Huit cœurs, la deuxième carte la plus puissante du relevé, 3 To de stockage dont 1 To en SSD, et une annonce qui vient de paraître. À 350 €, il reste 150 € de marge dans le budget.",
+   caveat:"Vendue sans câble d'alimentation, et carte Pascal aux pilotes figés."},
+  {role:"La plus proche", id:3254002831, p:300, city:"Givors", km:9, age:"4 jours",
    conf:"Core i5-9400F · GTX 1660 6 Go<br>16 Go · SSD 256 Go + HDD 500 Go",
-   why:"Neuf kilomètres, donc un essai sur place facile et un retour possible si un problème apparaît. Le processeur et la carte sont exactement dans la cible.",
+   why:"Neuf kilomètres, donc un essai sur place facile et un retour possible si un problème apparaît. Le processeur et la carte sont exactement dans la cible, et la carte est de génération courante.",
    caveat:"SSD de 256 Go : ajouter un 1 To (≈ 50 €) pour arriver à 350 € au total."},
-  {role:"La plus durable", id:3256284454, p:400, city:"Saint-Priest", km:22,
-   conf:"Ryzen 5 3600 · RTX 3060 12 Go<br>8 Go · SSD 1 To",
-   why:"La seule carte du lot qui tiendra encore dans quatre ou cinq ans, avec 12 Go de mémoire vidéo et le DLSS. Le choix à faire si l'ado joue déjà à autre chose que ces quatre titres.",
-   caveat:"8 Go de RAM seulement : une barrette de 8 Go coûte ≈ 25 €."},
-  {role:"La plus sûre", id:3199347989, p:360, city:"Lyon", km:21,
+  {role:"La plus durable", id:3254975076, p:399, city:"Saint-Priest", km:22, age:"3 jours",
+   conf:"Ryzen 7 1700X · RTX 3050<br>16 Go · SSD 1 To PNY",
+   why:"Huit cœurs, une carte RTX avec DLSS, 1 To de SSD et une alimentation be quiet! 600 W : tous les critères durs sont cochés sans exception, et l'annonce est fraîche. La RTX 3060 à 400 € du même quartier serait meilleure, mais un achat y est déjà en cours.",
+   caveat:"La RTX 3050 est la plus modeste des RTX — au niveau d'une GTX 1660 Ti."},
+  {role:"La plus sûre", id:3199347989, p:360, city:"Lyon", km:21, age:"20 jours",
    conf:"Core i7-7700 · GTX 1660 Super 6 Go<br>16 Go · SSD 512 Go + HDD 1 To",
    why:"Reconditionnée par un vendeur professionnel, donc testée, avec facture et garantie — le recours qui manque à toutes les ventes entre particuliers de cette liste.",
    caveat:"Processeur de 2017 en 4 cœurs / 8 threads."}
 ];
 
+/* Génération de la puce graphique. « current » = architecture 2019 ou plus récente,
+   encore servie par la branche de pilotes courante. « legacy » = Maxwell, Pascal et
+   Polaris, passées en support de sécurité seul. */
+function gpuGen(g) {
+  const s = g.toLowerCase();
+  if (/rtx/.test(s)) return "current";
+  if (/gtx\s*16/.test(s)) return "current";
+  if (/rx\s*(5[5-9]00|6[0-9]00)/.test(s)) return "current";
+  return "legacy";
+}
+
+/* Ancienneté de l'annonce. Un cycle de publication leboncoin dure environ deux mois :
+   au-delà, le vendeur a renouvelé son annonce sans trouver preneur. */
+function freshness(age) {
+  if (age === null || age === undefined) return {k: "inconnue", txt: "?", rank: 999};
+  const txt = age === 0 ? "aujourd'hui" : age === 1 ? "1 jour" : age < 400 ? age + " jours" : Math.round(age / 30) + " mois";
+  const k = age <= 14 ? "neuve" : age <= 60 ? "recente" : age <= 180 ? "ancienne" : "dormante";
+  return {k, txt, rank: age};
+}
+
 const url = id => "https://www.leboncoin.fr/ad/ordinateurs/" + id;
-ROWS.forEach(r => { r.score = Math.round(r.idx / r.p * 1000); });
+ROWS.forEach(r => {
+  r.score = Math.round(r.idx / r.p * 1000);
+  r.gen = gpuGen(r.gpu);
+  r.dlss = /rtx/i.test(r.gpu);
+  r.fresh = freshness(r.age);
+});
 const MAXSCORE = Math.max(...ROWS.map(r => r.score));
 
 /* ---- picks ---- */
@@ -730,10 +897,35 @@ document.getElementById("picks").innerHTML = PICKS.map(k => `
     <a class="go" href="${url(k.id)}" target="_blank" rel="noopener">Voir l'annonce</a>
   </article>`).join("");
 
+/* ---- picks « génération courante », annonces encore vivantes ---- */
+const GEN_PICKS = ROWS
+  .filter(r => r.gen === "current" && r.sf === "ok" && r.ram !== null && r.ram >= 16
+               && r.age !== null && r.age <= 60 && !r.deal)
+  .sort((a, b) => b.score - a.score)
+  .slice(0, 5);
+
+document.getElementById("rtxpicks").innerHTML = GEN_PICKS.map(r => `
+  <article class="pick">
+    <div class="role">${r.gpu}${r.dlss ? " · DLSS" : ""}</div>
+    <div class="headline">
+      <div class="price">${r.p} €</div>
+      <div class="where">${r.city}<br>${r.km} km</div>
+    </div>
+    <p class="conf">${r.cpu}<br>${r.ram} Go · ${r.sto}</p>
+    <p class="why">${r.note}</p>
+    <p class="caveat"><b>En ligne depuis</b><span>${r.fresh.txt}</span></p>
+    <a class="go" href="${url(r.id)}" target="_blank" rel="noopener">Voir l'annonce</a>
+  </article>`).join("");
+
 /* ---- excluded ---- */
 document.getElementById("excl").innerHTML = EXCLUDED.map(e => `
   <div>
     <div class="top"><b>${e.p} €</b><span>${e.city}</span></div>
+    <div class="reason">${e.why}</div>
+  </div>`).join("")
+  + EXCLUDED_BULK.map(e => `
+  <div>
+    <div class="top"><b>${e.n}</b><span>annonces</span></div>
     <div class="reason">${e.why}</div>
   </div>`).join("");
 
@@ -746,17 +938,21 @@ const filters = {
   "f-ram": r => r.ram !== null && r.ram >= 16,
   "f-km":  r => r.km <= 25,
   "f-cpu": r => !r.old,
-  "f-budget": r => r.p >= 300 && r.p <= 400
+  "f-budget": r => r.p >= 300 && r.p <= 400,
+  "f-gpu": r => r.idx >= 72,
+  "f-gen": r => r.gen === "current",
+  "f-age": r => r.age !== null && r.age <= 60,
+  "f-deal": r => !r.deal
 };
 
 function render() {
   const active = Object.entries(filters).filter(([id]) => document.getElementById(id).checked);
   let rows = ROWS.filter(r => active.every(([, fn]) => fn(r)));
 
+  const val = r => sortKey === "age" ? r.fresh.rank : (r[sortKey] === null ? -Infinity : r[sortKey]);
   rows.sort((a, b) => {
-    const av = a[sortKey], bv = b[sortKey];
-    const an = av === null ? -Infinity : av, bn = bv === null ? -Infinity : bv;
-    return an === bn ? a.score - b.score : (an - bn) * sortDir;
+    const an = val(a), bn = val(b);
+    return an === bn ? b.score - a.score : (an - bn) * sortDir;
   });
 
   document.getElementById("tcount").textContent =
@@ -764,25 +960,26 @@ function render() {
 
   const tb = document.getElementById("tbody");
   if (!rows.length) {
-    tb.innerHTML = `<tr><td colspan="10" class="empty">Aucune annonce ne passe tous ces filtres à la fois. Relâchez-en un.</td></tr>`;
+    tb.innerHTML = `<tr><td colspan="11" class="empty">Aucune annonce ne passe tous ces filtres à la fois. Relâchez-en un.</td></tr>`;
     return;
   }
 
   tb.innerHTML = rows.map((r, i) => {
     const tier = GPU_TIER(r.idx);
     const stoChip = r.sf === "ok" ? "" : ` <span class="chip ${r.sf}">${STO_LABEL[r.sf]}</span>`;
-    return `<tr class="${r.sf === "ok" ? "" : "flagged"}">
+    return `<tr class="${r.deal ? "deal" : r.sf === "ok" ? "" : "flagged"}">
       <td class="rank">${i + 1}</td>
       <td class="score"><div class="scorebar">
         <div class="track"><div class="fill" style="width:${Math.round(r.score / MAXSCORE * 100)}%"></div></div>
         <div class="num">${r.score}</div>
       </div></td>
-      <td class="price">${r.p} €</td>
-      <td class="gpu"><span class="name">${r.gpu}</span> <span class="chip ${tier}">${tier}</span></td>
+      <td class="price">${r.p} €${r.deal ? '<br><span class="chip deal">achat en cours</span>' : ""}</td>
+      <td class="gpu"><span class="name">${r.gpu}</span> <span class="chip ${tier}">${tier}</span>${r.gen === "legacy" ? ' <span class="chip legacy" title="Architecture Maxwell, Pascal ou Polaris : pilotes en support de sécurité seul">pilotes figés</span>' : ""}${r.dlss ? ' <span class="chip dlss">dlss</span>' : ""}</td>
       <td class="cpu">${r.cpu}${r.old ? ' <span class="chip old">daté</span>' : ""}</td>
       <td class="ram">${r.ram === null ? '<span class="dim">n.c.</span>' : r.ram + " Go"}</td>
       <td class="sto">${r.sto}${stoChip}</td>
       <td class="loc">${r.city}<br><span class="km">${r.km} km</span>${r.pro ? ' <span class="chip pro">pro</span>' : ""}</td>
+      <td class="age"><span class="agechip ${r.fresh.k}"><span class="dot"></span>${r.fresh.txt}</span></td>
       <td class="note">${r.note}</td>
       <td class="link"><a class="go" href="${url(r.id)}" target="_blank" rel="noopener">Voir</a></td>
     </tr>`;
