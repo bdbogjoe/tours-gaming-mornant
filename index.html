@@ -709,6 +709,11 @@ a:focus-visible, .toggle:focus-visible, th:focus-visible {
       <p>La pastille à côté de la carte graphique situe les quatre jeux visés en 1080p. <span class="chip ample">ample</span> tient largement et gardera de la marge ; <span class="chip suffisant">suffisant</span> fait tourner les quatre jeux sans souci ; <span class="chip juste">juste</span> passe mais sans réserve, surtout sur Fortnite.</p>
     </div>
     <div>
+      <h3>Le coût d&rsquo;une machine à 8 Go</h3>
+      <p>16 Go est le bon objectif : Fortnite tourne sur 8 Go mais le navigateur et Discord ouverts à côté font commencer les à-coups. Or la DDR4 n&rsquo;est plus produite en volume et son prix a monté — relevé d&rsquo;occasion autour de Lyon : <b>30 à 60 € la barrette de 8 Go seule, 60 à 90 € le kit apparié 2 × 8 Go</b>. Une tour à 8 Go n&rsquo;est donc pas à 25 € des 16 Go, elle est à 60-90 € si l&rsquo;on veut un kit propre.</p>
+      <p>Deuxième effet, souvent oublié : sur un Ryzen, deux barrettes en double canal rendent 10 à 15 % d&rsquo;images par seconde de plus qu&rsquo;une seule. Il faut donc demander au vendeur <b>si les 8 Go sont une barrette ou deux</b> — une seule barrette veut dire capacité <em>et</em> performance à récupérer, deux barrettes de 4 Go veulent dire remplacer plutôt que compléter.</p>
+    </div>
+    <div>
       <h3>La disponibilité</h3>
       <p>Chaque annonce a été rouverte une par une pour y lire son état de transaction, que leboncoin affiche en bandeau sur la page mais ne transmet pas dans les résultats de recherche : « Article vendu », « Un achat est en cours sur cet article », « Annonce actuellement en pause ». Six annonces vendues ont été retirées du tableau. Les deux qui portent <span class="chip deal">achat en cours</span> y restent, en rouge : une réservation peut échouer, mais il ne faut pas compter dessus.</p>
       <p>Le texte des annonces, lui, ne sert à rien pour ça : aucune ne mentionne « réservé » ou « sous réserve », et sur les 27 occurrences du mot « vendu », 23 sont le verbe — « vendu sans écran », « vendu avec clavier ». Seul le bandeau est fiable.</p>
@@ -736,7 +741,7 @@ a:focus-visible, .toggle:focus-visible, th:focus-visible {
 const GPU_TIER = i => i >= 57 ? "ample" : i >= 38 ? "suffisant" : "juste";
 
 const ROWS = [
-  {id:3256284454, deal:"achat", age:0, p:400, cpu:"Ryzen 5 3600", old:0, gpu:"RTX 3060 12 Go", idx:95, ram:8, sto:"SSD 1 To", sf:"ok", city:"Saint-Priest", km:22, pro:0, note:"Le meilleur GPU du lot, et de loin. Seulement 8 Go de RAM : prévoir une barrette."},
+  {id:3256284454, deal:"achat", age:0, p:400, cpu:"Ryzen 5 3600", old:0, gpu:"RTX 3060 12 Go", idx:95, ram:8, sto:"SSD 1 To", sf:"ok", city:"Saint-Priest", km:22, pro:0, note:"Le meilleur GPU du lot, et de loin. Mais 8 Go de RAM et une carte mère MSI B350M Bazooka : compter 60 à 90 € pour un kit apparié 2 × 8 Go, ce qui porte le total au-dessus de 450 €."},
   {id:2997676155, age:454, p:300, cpu:"Core i5-8600K", old:0, gpu:"GTX 1070 Ti 8 Go", idx:70, ram:16, sto:"SSD 500 Go + HDD 2 To", sf:"ok", city:"Lyon", km:20, pro:0, note:"Tout coche : 6 cœurs récents, SSD suffisant, 100 € sous le haut du budget. Sans écran ni périphériques."},
   {id:3254605133, age:3, p:350, cpu:"Ryzen 7 1700X", old:0, gpu:"GTX 1080 8 Go", idx:78, ram:16, sto:"SSD 1 To + HDD 2 To", sf:"ok", city:"Lyon", km:21, pro:0, note:"8 cœurs, 3 To de stockage. Vendu sans câble d'alimentation."},
   {id:2957405301, age:522, p:350, cpu:"Core i7-6700", old:1, gpu:"GTX 1080 8 Go", idx:78, ram:16, sto:"SSD 256 Go", sf:"small", city:"Villefranche-sur-Saône", km:41, pro:0, note:"Grosse carte, petit SSD, et 41 km de route."},
