@@ -593,7 +593,7 @@ a:focus-visible, .toggle:focus-visible, th:focus-visible {
       <div><dt>Annonces lues</dt><dd>495</dd></div>
       <div><dt>Disponibles</dt><dd>134</dd></div>
       <div><dt>Fraîches &lt; 2 mois</dt><dd>48</dd></div>
-      <div><dt>Écartées</dt><dd>213</dd></div>
+      <div><dt>Écartées</dt><dd>361</dd></div>
     </dl>
   </header>
 
@@ -695,8 +695,8 @@ a:focus-visible, .toggle:focus-visible, th:focus-visible {
   </section>
 
   <section>
-    <h2>Écartées <span class="count">213 annonces</span></h2>
-    <p class="sec-note">Ces annonces sortaient des critères : vendues, sans SSD, sans liste de composants exploitable, ou avec une carte graphique qui n&rsquo;est pas une carte de jeu. Les cas particuliers d&rsquo;abord, puis les motifs de masse.</p>
+    <h2>Écartées <span class="count">361 annonces</span></h2>
+    <p class="sec-note">495 annonces lues, 134 retenues : les 361 autres sortaient des critères. Les cas particuliers d&rsquo;abord, puis les motifs de masse, qui couvrent l&rsquo;essentiel du volume — beaucoup d&rsquo;annonces cumulent plusieurs motifs, les nombres ci-dessous ne s&rsquo;additionnent donc pas exactement à 361.</p>
     <div class="excl" id="excl"></div>
   </section>
 
@@ -918,9 +918,9 @@ const EXCLUDED = [
 
 /* Écartées automatiquement dans le périmètre 50 km, par motif. */
 const EXCLUDED_BULK = [
-  {n:139, why:"Ni processeur ni carte graphique annoncés"},
+  {n:205, why:"Ni processeur ni carte graphique annoncés"},
   {n:59,  why:"Aucun SSD mentionné dans l'annonce"},
-  {n:8,   why:"Annonce marquée vendue ou réservée"},
+  {n:11,  why:"Vendue, réservée, ou achat en cours ailleurs"},
   {n:2,   why:"Vendues explicitement sans stockage"},
   {n:2,   why:"Composants vendus séparément"}
 ];

@@ -35,7 +35,7 @@ au-delà le vendeur a renouvelé son annonce sans la vendre.
   budget, niveau RTX 2060, carte de 2019 ou plus récente, annonce fraîche,
   sans achat en cours).
 - Le classement des 35 cartes graphiques rencontrées, par puissance 1080p.
-- Les 213 annonces écartées et le motif de chaque exclusion.
+- Les 361 annonces écartées et le motif de chaque exclusion.
 
 ## Périmètre du relevé
 
@@ -47,7 +47,7 @@ au-delà le vendeur a renouvelé son annonce sans la vendre.
 | Annonces lues | 495 (description complète de chacune) |
 | Disponibles et retenues | 134 |
 | Fraîches, moins de 2 mois | 48 |
-| Écartées | 213 |
+| Écartées | 361 |
 
 Les PC portables sont exclus par le filtre de type. Les composants vendus seuls
 et les annonces sans liste de composants exploitable sont écartés à la lecture.
