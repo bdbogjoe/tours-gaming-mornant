@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="99 tours PC gaming disponibles autour de Mornant jusqu'a 500 EUR, classees au rapport puissance/prix, avec etat de disponibilite et anciennete de chaque annonce.">
+<meta name="description" content="99 tours PC gaming disponibles autour de Mornant jusqu'a 500 EUR, avec le classement des 33 cartes graphiques rencontrees, l'etat de disponibilite et l'anciennete de chaque annonce.">
 <meta name="color-scheme" content="light dark">
 <meta property="og:title" content="Tours Gaming autour de Mornant">
-<meta property="og:description" content="99 tours PC gaming disponibles autour de Mornant jusqu'a 500 EUR, classees au rapport puissance/prix, avec etat de disponibilite et anciennete de chaque annonce.">
+<meta property="og:description" content="99 tours PC gaming disponibles autour de Mornant jusqu'a 500 EUR, avec le classement des 33 cartes graphiques rencontrees, l'etat de disponibilite et l'anciennete de chaque annonce.">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='88'%3E%F0%9F%96%A5%EF%B8%8F%3C/text%3E%3C/svg%3E">
 <title>Tours Gaming autour de Mornant</title>
@@ -104,7 +104,7 @@ body {
 }
 
 .wrap {
-  max-width: 1180px;
+  max-width: 1340px;
   margin: 0 auto;
   padding: 0 20px 96px;
 }
@@ -347,11 +347,14 @@ a.go:hover, a.go:focus-visible { color: var(--accent-ink); }
   border-radius: 3px;
   background: var(--surface);
 }
+/* Largeurs fixes : sans ça les remarques étirent le tableau bien au-delà
+   du conteneur et chaque ligne se lit au défilement horizontal. */
 table {
   width: 100%;
   border-collapse: collapse;
   font-size: 13.5px;
-  min-width: 1000px;
+  table-layout: fixed;
+  min-width: 1060px;
 }
 thead th {
   position: sticky;
@@ -365,16 +368,15 @@ thead th {
   text-transform: uppercase;
   color: var(--ink-2);
   text-align: left;
-  padding: 10px 12px;
+  padding: 10px 10px;
   border-bottom: 1px solid var(--line);
-  white-space: nowrap;
 }
 thead th.sortable { cursor: pointer; }
 thead th.sortable:hover { color: var(--accent); }
 thead th .arrow { opacity: 0; margin-left: 3px; }
 thead th[aria-sort] .arrow { opacity: 1; color: var(--accent); }
 tbody td {
-  padding: 11px 12px;
+  padding: 11px 10px;
   border-bottom: 1px solid var(--line-soft);
   vertical-align: top;
 }
@@ -388,9 +390,12 @@ td.rank {
   font-size: 12px;
   color: var(--ink-3);
   font-variant-numeric: tabular-nums;
-  width: 34px;
 }
-td.score { width: 116px; }
+td, th { overflow-wrap: break-word; }
+
+.gputable { min-width: 880px; }
+.gputable td { vertical-align: middle; }
+.gputable .scorebar { margin-bottom: 4px; }
 .scorebar {
   display: flex;
   align-items: center;
@@ -410,7 +415,7 @@ td.score { width: 116px; }
   font-weight: 500;
   font-variant-numeric: tabular-nums;
   color: var(--ink-2);
-  width: 26px;
+  flex: none;
   text-align: right;
 }
 td.price {
@@ -419,28 +424,24 @@ td.price {
   font-size: 16px;
   letter-spacing: -.01em;
   font-variant-numeric: tabular-nums;
-  white-space: nowrap;
-  width: 68px;
 }
-td.gpu { min-width: 150px; }
+td.gpu { line-height: 1.5; }
 td.gpu .name { font-weight: 500; }
-td.cpu { min-width: 132px; }
+td.cpu { line-height: 1.5; }
 td.ram {
   font-family: "IBM Plex Mono", ui-monospace, monospace;
   font-variant-numeric: tabular-nums;
-  white-space: nowrap;
-  width: 62px;
 }
-td.sto { min-width: 190px; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 12px; }
-td.loc { min-width: 132px; }
+td.sto { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 12px; line-height: 1.5; }
+td.loc { line-height: 1.45; }
 td.loc .km {
   font-family: "IBM Plex Mono", ui-monospace, monospace;
   font-size: 11.5px;
   color: var(--ink-3);
   font-variant-numeric: tabular-nums;
 }
-td.note { min-width: 210px; font-size: 12.5px; color: var(--ink-2); }
-td.link { width: 52px; }
+td.note { font-size: 12.5px; color: var(--ink-2); line-height: 1.5; }
+td.link { }
 
 .chip {
   display: inline-block;
@@ -476,7 +477,7 @@ td.link { width: 52px; }
 tbody tr.deal { background: linear-gradient(90deg, var(--crit) 0 3px, transparent 3px); }
 tbody tr.deal:hover { background: linear-gradient(90deg, var(--crit) 0 3px, var(--surface-2) 3px); }
 
-td.age { width: 96px; white-space: nowrap; }
+td.age { }
 .agechip {
   display: inline-flex;
   align-items: center;
@@ -609,12 +610,44 @@ a:focus-visible, .toggle:focus-visible, th:focus-visible {
       <p><b>« Les GTX sont trop vieilles » : vrai pour les GTX 900 et 1000, faux pour les GTX 1600.</b> Le partage ne se fait pas sur le nom mais sur l&rsquo;architecture. Les GTX 900 (960, 970, 980) et GTX 1000 (1050, 1060, 1070, 1080) sont des puces Maxwell et Pascal de 2014-2016, que NVIDIA a basculées en support de sécurité seul : plus aucune optimisation pour les jeux à venir. Côté AMD, les RX 400, 500 et 590 sont dans le même cas. Ce sont elles qui portent l&rsquo;étiquette <span class="chip legacy">pilotes figés</span> dans le tableau.</p>
       <p><b>Les GTX 1650, 1660, 1660 Super et 1660 Ti, elles, sont de 2019</b> — même génération Turing que les RTX 2000, encore pleinement suivies par les pilotes. Il leur manque seulement le DLSS. Les mettre dans le même panier que les GTX 900 serait une erreur : ce sont les mêmes puces que les RTX 2060, amputées des cœurs de calcul dédiés.</p>
       <p><b>Le vrai critère est donc l&rsquo;année de l&rsquo;architecture, pas la lettre.</b> Le filtre « carte de 2019 ou plus récente » du tableau applique exactement ça : il garde les GTX 1600, les RTX, les RX 5500/5600 et les RX 6000, et écarte tout le reste.</p>
-      <p><b>Et c&rsquo;est le passage à 500 € qui règle l&rsquo;arbitrage.</b> Sous 400 €, exiger une carte récente coûtait de la puissance brute : la meilleure option conforme était une GTX 1660 Super, très en dessous de la GTX 1070 Ti trouvée à 300 €. À 500 €, la contradiction disparaît — le palier fait apparaître des RTX 3060 Ti, une RTX 4060 et une RX 6600 XT, qui battent les Pascal <em>et</em> sont suivies par les pilotes <em>et</em> ont le DLSS ou le FSR. Les 100 € supplémentaires n&rsquo;achètent pas 25 % de machine en plus : ils font changer de catégorie.</p>
-      <p><b>Avec un bémol de taille : ces trois affaires-là sont des mirages.</b> La RTX 4060 à 500 € est en ligne depuis 15 mois, la RTX 3060 Ti de Lyon depuis 2 ans, la RX 6600 XT depuis 2 ans également. Une tour de jeu correctement prixée part en quelques jours dans l&rsquo;agglomération lyonnaise ; une annonce renouvelée pendant deux ans signifie soit que le vendeur ne répond plus, soit qu&rsquo;il y a quelque chose que l&rsquo;annonce ne dit pas.</p>
+      <p><b>Et c&rsquo;est le passage à 500 € qui règle l&rsquo;arbitrage.</b> Sous 400 €, exiger une carte récente coûtait de la puissance brute : la meilleure option conforme était une GTX 1660 Super, très en dessous de la GTX 1070 Ti trouvée à 300 €. À 500 €, la contradiction disparaît — le palier fait apparaître des RTX 3060, une RTX 4060 et une RX 6600 XT, qui battent les Pascal <em>et</em> sont suivies par les pilotes <em>et</em> ont le DLSS ou le FSR. Les 100 € supplémentaires n&rsquo;achètent pas 25 % de machine en plus : ils font changer de catégorie.</p>
+      <p><b>Avec un bémol de taille : ces trois affaires-là sont des mirages.</b> La RTX 4060 à 500 € est en ligne depuis 15 mois, la RTX 3060 de Lyon depuis 2 ans, la RX 6600 XT depuis 2 ans également. Une tour de jeu correctement prixée part en quelques jours dans l&rsquo;agglomération lyonnaise ; une annonce renouvelée pendant deux ans signifie soit que le vendeur ne répond plus, soit qu&rsquo;il y a quelque chose que l&rsquo;annonce ne dit pas.</p>
       <p><b>La démonstration par les faits :</b> la RTX 3060 à 425 € de Rive-de-Gier, à 11 km — le meilleur matériel du relevé à cette distance — a été vendue pendant la constitution de ce tableau, comme la RTX 3050 de Saint-Priest et la GTX 1070 de Saint-Just. Et la RTX 3060 à 400 €, parue le jour même, avait déjà un achat en cours. Les cartes ci-dessous ne retiennent donc que des annonces disponibles, de moins de deux mois.</p>
     </div>
     <p class="sec-note" style="margin-top:26px">Les cinq meilleures machines qui passent ce filtre <em>et</em> le SSD de 500 Go <em>et</em> les 16 Go de RAM <em>et</em> les deux mois d&rsquo;ancienneté, sans aucune réserve à lever :</p>
     <div class="picks" id="rtxpicks"></div>
+  </section>
+
+  <section>
+    <h2>Classement des cartes graphiques <span class="count">33 modèles rencontrés</span></h2>
+    <p class="sec-note">Toutes les cartes trouvées dans le relevé, du plus rapide au plus lent en 1080p. À lire avant de juger une annonce sur le nom de sa carte.</p>
+    <div class="verdict">
+      <p><b>« RTX » ne veut pas dire « plus puissant que GTX ».</b> C&rsquo;est une différence d&rsquo;équipement : les RTX embarquent des cœurs dédiés au lancer de rayons et au DLSS, les GTX non. La puissance, elle, se lit dans les chiffres — les premiers donnent la génération, les <b>deux derniers donnent le rang dans cette génération</b>. Une x050 est le bas de gamme, une x080 le haut.</p>
+      <p><b>Dans une même génération, oui, RTX dépasse GTX</b> : la RTX 2060 passe devant la GTX 1660 Ti. <b>Mais d&rsquo;une génération à l&rsquo;autre, le rang compte plus que l&rsquo;ancienneté.</b> Une GTX 1080 de 2016, haut de gamme de son époque, bat une RTX 3050 de 2022 d&rsquo;environ 15 %. Et la RTX 2060 de 2019 devance elle aussi la RTX 3050, parce qu&rsquo;elle a un bus mémoire de 192 bits contre 128 : plus de cœurs sur la 3050, mais bien moins de bande passante. Le seul avantage de la 3050 est ses 8 Go de mémoire vidéo contre 6.</p>
+      <p>La colonne DLSS est le vrai départage entre cartes de puissance voisine : c&rsquo;est ce qui permet de tenir 60 images/s plusieurs années de plus. Son équivalent AMD, le FSR, est une technique logicielle qui fonctionne sur presque toutes les cartes de ce tableau, GTX comprises — elle ne distingue donc personne.</p>
+    </div>
+    <div class="tablewrap">
+      <table class="gputable">
+        <colgroup>
+          <col style="width:19%"><col style="width:8%"><col style="width:15%">
+          <col style="width:9%"><col style="width:17%"><col style="width:11%">
+          <col style="width:9%"><col style="width:12%">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>Carte</th>
+            <th>Année</th>
+            <th>Architecture</th>
+            <th>VRAM</th>
+            <th>Puissance 1080p</th>
+            <th>Pilotes</th>
+            <th>DLSS</th>
+            <th>Dans le relevé</th>
+          </tr>
+        </thead>
+        <tbody id="gpubody"></tbody>
+      </table>
+    </div>
   </section>
 
   <section>
@@ -634,6 +667,12 @@ a:focus-visible, .toggle:focus-visible, th:focus-visible {
     </div>
     <div class="tablewrap">
       <table>
+        <colgroup>
+          <col style="width:3%"><col style="width:8%"><col style="width:7%">
+          <col style="width:13%"><col style="width:11%"><col style="width:5%">
+          <col style="width:14.5%"><col style="width:9.5%"><col style="width:8%">
+          <col style="width:16.5%"><col style="width:4%">
+        </colgroup>
         <thead>
           <tr>
             <th>#</th>
@@ -663,7 +702,7 @@ a:focus-visible, .toggle:focus-visible, th:focus-visible {
   <div class="method">
     <div>
       <h3>Le score</h3>
-      <p><code>indice GPU ÷ prix × 1000</code>. L&rsquo;indice GPU est une échelle de performance relative en 1080p (RX 460 = 18, GTX 1060 6 Go = 45, GTX 1660 = 57, RTX 2060 = 72, RX 6600 = 88, RTX 3060 = 95, RTX 3060 Ti = 112, RTX 4060 = 118). Un score de 200 veut dire « beaucoup de carte graphique pour l&rsquo;argent », pas « bonne machine » : un SSD de 120 Go ou un processeur de 2012 ne pénalisent pas le score, ils apparaissent en remarque.</p>
+      <p><code>indice GPU ÷ prix × 1000</code>. L&rsquo;indice GPU est une échelle de performance relative en 1080p (RX 460 = 18, GTX 1060 6 Go = 45, GTX 1660 = 57, RTX 2060 = 72, RX 6600 = 88, RTX 3060 = 95, RTX 4060 = 110). Un score de 200 veut dire « beaucoup de carte graphique pour l&rsquo;argent », pas « bonne machine » : un SSD de 120 Go ou un processeur de 2012 ne pénalisent pas le score, ils apparaissent en remarque.</p>
     </div>
     <div>
       <h3>Le confort de jeu</h3>
@@ -687,7 +726,7 @@ a:focus-visible, .toggle:focus-visible, th:focus-visible {
     <div>
       <h3>Ce que le tableau ne dit pas</h3>
       <p>Les composants viennent de la description rédigée par le vendeur : ni vérifiés, ni testés. « Non précisé » veut dire que l&rsquo;annonce reste muette — à demander avant de se déplacer, au même titre que la marque de l&rsquo;alimentation et l&rsquo;état des ventilateurs.</p>
-      <p>Dans la tranche 440 – 500 €, seules les machines à carte de génération courante sont listées. 12 annonces conformes y reposent sur une carte Pascal ou Polaris : à ce prix, elles sont dominées par les RTX 3060 Ti et la RTX 4060 du même palier, et ne sont donc pas reprises.</p>
+      <p>Dans la tranche 440 – 500 €, seules les machines à carte de génération courante sont listées. 12 annonces conformes y reposent sur une carte Pascal ou Polaris : à ce prix, elles sont dominées par les RTX 3060 et la RTX 4060 du même palier, et ne sont donc pas reprises.</p>
     </div>
   </div>
 
@@ -778,9 +817,9 @@ const ROWS = [
   {id:3240943494, age:28, p:260, cpu:"Core i5-6500", old:1, gpu:"GTX 1060 3 Go", idx:38, ram:16, sto:"À confirmer", sf:"unknown", city:"Lyon", km:21, pro:1, note:"Reconditionné pro. La version 3 Go de la GTX 1060 est sensiblement plus lente que la 6 Go."},
 
   /* ---- tranche 455 – 500 €, cartes de génération courante uniquement ---- */
-  {id:2997576873, age:454, p:500, cpu:"Core i5-10400F", old:0, gpu:"RTX 4060", idx:118, ram:16, sto:"SSD NVMe 1 To", sf:"ok", city:"Lyon", km:20, pro:0, note:"La carte la plus récente du relevé (2023) : DLSS 3 avec génération d'images, que rien d'autre ici ne sait faire. Machine utilisée six mois."},
-  {id:2841745670, age:717, p:500, cpu:"Core i5-11600K", old:0, gpu:"RTX 3060 Ti", idx:112, ram:16, sto:"SSD NVMe Samsung 980 500 Go", sf:"ok", city:"Lyon", km:20, pro:0, note:"Tour Top Achat NOBELIUM sous Windows 11, ventirad be quiet! Dark Rock Slim. Ensemble cohérent de bout en bout."},
-  {id:3186282399, age:122, p:500, cpu:"Ryzen 5 3600", old:0, gpu:"RTX 3060 Ti", idx:112, ram:16, sto:"SSD NVMe WD SN550 500 Go", sf:"ok", city:"Sury-le-Comtal", km:39, pro:0, note:"Achetée 1 200 € il y a 18 mois, état neuf, non négociable. Alimentation Aerocool, la pièce la plus faible. Écran, clavier et souris pour 200 € de plus."},
+  {id:2997576873, age:454, p:500, cpu:"Core i5-10400F", old:0, gpu:"RTX 4060", idx:110, ram:16, sto:"SSD NVMe 1 To", sf:"ok", city:"Lyon", km:20, pro:0, note:"La carte la plus récente du relevé (2023) : DLSS 3 avec génération d'images, que rien d'autre ici ne sait faire. Machine utilisée six mois."},
+  {id:2841745670, age:717, p:500, cpu:"Core i5-11600K", old:0, gpu:"RTX 3060 12 Go", idx:95, ram:16, sto:"SSD NVMe Samsung 980 500 Go", sf:"ok", city:"Lyon", km:20, pro:0, note:"Annoncée « RTX 3060 Ti » : ce modèle n'existe pas, et la référence citée (Gigabyte EAGLE OC Rev 2.0 LHR) est celle d'une RTX 3060 12 Go. Tour Top Achat NOBELIUM sous Windows 11, ventirad be quiet! Dark Rock Slim."},
+  {id:3186282399, age:122, p:500, cpu:"Ryzen 5 3600", old:0, gpu:"RTX 3060 12 Go", idx:95, ram:16, sto:"SSD NVMe WD SN550 500 Go", sf:"ok", city:"Sury-le-Comtal", km:39, pro:0, note:"Annoncée « RTX 3060 Ti de chez Zotac » : ce modèle n'existe pas, c'est une RTX 3060. Achetée 1 200 € il y a 18 mois, état neuf, non négociable. Alimentation Aerocool, la pièce la plus faible."},
   {id:2812466993, age:746, p:500, cpu:"Core i5-10400F", old:0, gpu:"RX 6600 XT", idx:97, ram:16, sto:"SSD NVMe Crucial P2 500 Go", sf:"ok", city:"Fontaines-Saint-Martin", km:29, pro:0, note:"Équivalente à une RTX 3060 côté performances, avec FSR au lieu du DLSS. Tout est spécifié."},
   {id:3088996123, age:290, p:500, cpu:"Ryzen 7 5700G", old:0, gpu:"RTX 3060 12 Go", idx:95, ram:16, sto:"SSD 954 Go", sf:"ok", city:"Lyon", km:20, pro:0, note:"Le meilleur couple processeur / carte du relevé : 8 cœurs de 2021 et 12 Go de mémoire vidéo. Annonce recopiée des informations système Windows."},
   {id:3203987916, age:93, p:500, cpu:"Ryzen 5 4500", old:0, gpu:"RTX 3060", idx:95, ram:16, sto:"SSD 1 To", sf:"ok", city:"Communay", km:13, pro:0, note:"La plus proche des machines à carte récente. État annoncé « satisfaisant » seulement, et livrée avec un simple câble d'alimentation."},
@@ -896,6 +935,86 @@ document.getElementById("picks").innerHTML = PICKS.map(k => `
     <p class="caveat"><b>Réserve —</b><span>${k.caveat}</span></p>
     <a class="go" href="${url(k.id)}" target="_blank" rel="noopener">Voir l'annonce</a>
   </article>`).join("");
+
+/* ---- classement des cartes ---- */
+/* idx = puissance relative approximative en 1080p, même échelle que le score.
+   drv "legacy" = Maxwell, Pascal, Kepler, Polaris : correctifs de sécurité seuls. */
+const GPUS = [
+  ["RTX 4060",        2023, "Ada Lovelace", "8 Go",   110, "current", "DLSS 3"],
+  ["RX 6600 XT",      2021, "RDNA 2",       "8 Go",    97, "current", ""],
+  ["RTX 3060 12 Go",  2021, "Ampere",       "12 Go",   95, "current", "DLSS 2"],
+  ["RTX 2070",        2018, "Turing",       "8 Go",    88, "current", "DLSS 2"],
+  ["RX 6600",         2021, "RDNA 2",       "8 Go",    88, "current", ""],
+  ["RTX 2060 Super",  2019, "Turing",       "8 Go",    82, "current", "DLSS 2"],
+  ["GTX 1080",        2016, "Pascal",       "8 Go",    78, "legacy",  ""],
+  ["RTX 2060",        2019, "Turing",       "6 Go",    72, "current", "DLSS 2"],
+  ["GTX 1070 Ti",     2017, "Pascal",       "8 Go",    70, "legacy",  ""],
+  ["RTX 3050",        2022, "Ampere",       "8 Go",    68, "current", "DLSS 2"],
+  ["RX 5600 XT",      2020, "RDNA 1",       "6 Go",    66, "current", ""],
+  ["GTX 1660 Ti",     2019, "Turing",       "6 Go",    65, "current", ""],
+  ["GTX 1660 Super",  2019, "Turing",       "6 Go",    63, "current", ""],
+  ["GTX 1070",        2016, "Pascal",       "8 Go",    62, "legacy",  ""],
+  ["GTX 980 Ti",      2015, "Maxwell",      "6 Go",    58, "legacy",  ""],
+  ["GTX 1660",        2019, "Turing",       "6 Go",    57, "current", ""],
+  ["GTX 1650 Super",  2019, "Turing",       "4 Go",    52, "current", ""],
+  ["RX 5500 XT",      2019, "RDNA 1",       "4–8 Go",  52, "current", ""],
+  ["RX 6500 XT",      2022, "RDNA 2",       "4 Go",    50, "current", ""],
+  ["RX 590",          2018, "Polaris",      "8 Go",    48, "legacy",  ""],
+  ["RX 580",          2017, "Polaris",      "8 Go",    46, "legacy",  ""],
+  ["GTX 980",         2014, "Maxwell",      "4 Go",    45, "legacy",  ""],
+  ["GTX 1060 6 Go",   2016, "Pascal",       "6 Go",    45, "legacy",  ""],
+  ["RX 480",          2016, "Polaris",      "8 Go",    44, "legacy",  ""],
+  ["RX 6400",         2022, "RDNA 2",       "4 Go",    42, "current", ""],
+  ["RX 570",          2017, "Polaris",      "4–8 Go",  40, "legacy",  ""],
+  ["GTX 970",         2015, "Maxwell",      "3,5+0,5", 38, "legacy",  ""],
+  ["GTX 1060 3 Go",   2016, "Pascal",       "3 Go",    38, "legacy",  ""],
+  ["GTX 1650",        2019, "Turing",       "4 Go",    38, "current", ""],
+  ["GTX 960",         2015, "Maxwell",      "2 Go",    28, "legacy",  ""],
+  ["GTX 1050 Ti",     2016, "Pascal",       "4 Go",    26, "legacy",  ""],
+  ["GTX 770",         2013, "Kepler",       "2 Go",    24, "legacy",  ""],
+  ["RX 460",          2016, "Polaris",      "2–4 Go",  18, "legacy",  ""]
+];
+
+const GPU_MAX = Math.max(...GPUS.map(g => g[4]));
+
+/* Rattache le libellé d'un vendeur à un modèle. Le tri par clé décroissante est
+   indispensable : sans lui « GTX 1070 » capterait aussi les « GTX 1070 Ti ». */
+const GPU_KEYS = GPUS
+  .map(g => [g[0], g[0].toLowerCase().replace(/\s*\d+\s*go$/, "").trim()])
+  .sort((a, b) => b[1].length - a[1].length);
+
+function gpuModel(raw) {
+  const g = raw.toLowerCase().trim();
+  if (/gtx\s*1060/.test(g)) return /\b3\s*go\b/.test(g) ? "GTX 1060 3 Go" : "GTX 1060 6 Go";
+  if (/rtx\s*3060/.test(g)) return "RTX 3060 12 Go";
+  for (const [name, key] of GPU_KEYS) if (g.startsWith(key)) return name;
+  return null;
+}
+
+const GPU_HITS = {};
+ROWS.forEach(r => {
+  const m = gpuModel(r.gpu);
+  if (m) (GPU_HITS[m] = GPU_HITS[m] || []).push(r);
+});
+
+document.getElementById("gpubody").innerHTML = GPUS.map(([name, year, arch, vram, idx, drv, dlss]) => {
+  const tier = GPU_TIER(idx);
+  const hits = GPU_HITS[name] || [];
+  const cheapest = hits.length ? Math.min(...hits.map(r => r.p)) : null;
+  return `<tr>
+    <td class="gpu"><span class="name">${name}</span></td>
+    <td class="ram">${year}</td>
+    <td>${arch}</td>
+    <td class="ram">${vram}</td>
+    <td class="score"><div class="scorebar">
+      <div class="track"><div class="fill" style="width:${Math.round(idx / GPU_MAX * 100)}%"></div></div>
+      <div class="num">${idx}</div>
+    </div><span class="chip ${tier}">${tier}</span></td>
+    <td>${drv === "legacy" ? '<span class="chip legacy">figés</span>' : '<span class="chip ok">suivis</span>'}</td>
+    <td>${dlss ? `<span class="chip dlss">${dlss}</span>` : '<span class="dim">—</span>'}</td>
+    <td class="ram">${hits.length ? hits.length + (hits.length > 1 ? " annonces" : " annonce") + "<br><span class=\"dim\">dès " + cheapest + " €</span>" : '<span class="dim">—</span>'}</td>
+  </tr>`;
+}).join("");
 
 /* ---- picks « génération courante », annonces encore vivantes ---- */
 const GEN_PICKS = ROWS
