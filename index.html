@@ -1,0 +1,814 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="61 tours PC gaming a vendre autour de Mornant entre 250 et 430 EUR, classees au rapport puissance/prix, avec composants et alertes stockage.">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Tours Gaming autour de Mornant">
+<meta property="og:description" content="61 tours PC gaming a vendre autour de Mornant entre 250 et 430 EUR, classees au rapport puissance/prix, avec composants et alertes stockage.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='88'%3E%F0%9F%96%A5%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<title>Tours Gaming autour de Mornant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+
+<style>
+/* minimal reset (the artifact runtime normally supplies this) */
+*, *::before, *::after { box-sizing: border-box; }
+body, h1, h2, h3, p, dl, dd, figure, blockquote { margin: 0; }
+
+:root {
+  --ground: #EFF3F4;
+  --surface: #FFFFFF;
+  --surface-2: #F6FAFA;
+  --surface-3: #E7EEEF;
+  --ink: #0F171B;
+  --ink-2: #4A5A61;
+  --ink-3: #7C8C93;
+  --line: #D5DEE1;
+  --line-soft: #E4EBED;
+  --accent: #0B6E78;
+  --accent-ink: #08545C;
+  --accent-soft: #DCEEEF;
+  --ok: #1E7A46;
+  --ok-soft: #DEEFE4;
+  --warn: #8F5406;
+  --warn-soft: #F7E9D4;
+  --crit: #A02218;
+  --crit-soft: #F8E2DF;
+  --bar: #0B6E78;
+  --bar-track: #E1E9EA;
+  --shadow: 0 1px 2px rgba(15,23,27,.05), 0 8px 24px -12px rgba(15,23,27,.16);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground: #0C1215;
+    --surface: #121B1F;
+    --surface-2: #162126;
+    --surface-3: #1D2C32;
+    --ink: #E4ECEE;
+    --ink-2: #9DB0B6;
+    --ink-3: #6D8188;
+    --line: #24333A;
+    --line-soft: #1C282D;
+    --accent: #3FC2CC;
+    --accent-ink: #7FDCE3;
+    --accent-soft: #10353A;
+    --ok: #55C486;
+    --ok-soft: #10301F;
+    --warn: #DFA24A;
+    --warn-soft: #33250F;
+    --crit: #EE7466;
+    --crit-soft: #381915;
+    --bar: #3FC2CC;
+    --bar-track: #1D2C32;
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+  }
+}
+:root[data-theme="dark"] {
+  --ground: #0C1215;
+  --surface: #121B1F;
+  --surface-2: #162126;
+  --surface-3: #1D2C32;
+  --ink: #E4ECEE;
+  --ink-2: #9DB0B6;
+  --ink-3: #6D8188;
+  --line: #24333A;
+  --line-soft: #1C282D;
+  --accent: #3FC2CC;
+  --accent-ink: #7FDCE3;
+  --accent-soft: #10353A;
+  --ok: #55C486;
+  --ok-soft: #10301F;
+  --warn: #DFA24A;
+  --warn-soft: #33250F;
+  --crit: #EE7466;
+  --crit-soft: #381915;
+  --bar: #3FC2CC;
+  --bar-track: #1D2C32;
+  --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  font-size: 15px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px 96px;
+}
+
+/* ---------- masthead ---------- */
+
+.masthead {
+  border-bottom: 1px solid var(--line);
+  padding: 44px 0 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.eyebrow {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 11.5px;
+  font-weight: 500;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+h1 {
+  font-family: Archivo, ui-sans-serif, system-ui, sans-serif;
+  font-weight: 700;
+  font-size: clamp(30px, 5.4vw, 50px);
+  line-height: 1.02;
+  letter-spacing: -.028em;
+  margin: 0;
+  text-wrap: balance;
+  max-width: 20ch;
+}
+.standfirst {
+  margin: 0;
+  max-width: 62ch;
+  color: var(--ink-2);
+  font-size: 16.5px;
+}
+
+.brief {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: var(--surface);
+  overflow: hidden;
+}
+.brief div {
+  flex: 1 1 150px;
+  padding: 12px 16px;
+  border-right: 1px solid var(--line-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.brief div:last-child { border-right: 0; }
+.brief dt {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 10.5px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.brief dd {
+  margin: 0;
+  font-weight: 600;
+  font-size: 14.5px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- sections ---------- */
+
+section { padding-top: 52px; }
+
+h2 {
+  font-family: Archivo, ui-sans-serif, system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  margin: 0 0 4px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+h2 .count {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: var(--ink-3);
+  text-transform: none;
+}
+.sec-note {
+  margin: 0 0 22px;
+  color: var(--ink-2);
+  max-width: 64ch;
+  font-size: 14.5px;
+}
+
+/* ---------- picks ---------- */
+
+.picks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(248px, 1fr));
+  gap: 14px;
+}
+.pick {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 18px 18px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  box-shadow: var(--shadow);
+}
+.pick .role {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.pick .headline {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+}
+.pick .price {
+  font-family: Archivo, sans-serif;
+  font-weight: 700;
+  font-size: 27px;
+  letter-spacing: -.02em;
+  font-variant-numeric: tabular-nums;
+}
+.pick .where {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 11.5px;
+  color: var(--ink-3);
+  text-align: right;
+  line-height: 1.35;
+}
+.pick .conf {
+  margin: 0;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: var(--ink);
+}
+.pick .why {
+  margin: 0;
+  font-size: 13.5px;
+  color: var(--ink-2);
+  flex: 1;
+}
+.pick .caveat {
+  margin: 0;
+  font-size: 12.5px;
+  color: var(--warn);
+  display: flex;
+  gap: 6px;
+}
+.pick .caveat b { font-weight: 600; flex: none; }
+a.go {
+  align-self: flex-start;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 11.5px;
+  font-weight: 500;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 1px;
+}
+a.go:hover, a.go:focus-visible { color: var(--accent-ink); }
+
+/* ---------- controls ---------- */
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.controls .lbl {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 10.5px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-right: 2px;
+}
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 12px;
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  background: var(--surface);
+  font-size: 13px;
+  cursor: pointer;
+  user-select: none;
+  color: var(--ink-2);
+}
+.toggle:hover { border-color: var(--accent); }
+.toggle input { margin: 0; accent-color: var(--accent); width: 13px; height: 13px; }
+.toggle:has(input:checked) {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--ink);
+  font-weight: 500;
+}
+.toggle:focus-within { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* ---------- table ---------- */
+
+.tablewrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: var(--surface);
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+  min-width: 1000px;
+}
+thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: var(--surface-3);
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--line);
+  white-space: nowrap;
+}
+thead th.sortable { cursor: pointer; }
+thead th.sortable:hover { color: var(--accent); }
+thead th .arrow { opacity: 0; margin-left: 3px; }
+thead th[aria-sort] .arrow { opacity: 1; color: var(--accent); }
+tbody td {
+  padding: 11px 12px;
+  border-bottom: 1px solid var(--line-soft);
+  vertical-align: top;
+}
+tbody tr:last-child td { border-bottom: 0; }
+tbody tr:hover { background: var(--surface-2); }
+tbody tr.flagged { background: linear-gradient(90deg, var(--warn-soft) 0 3px, transparent 3px); }
+tbody tr.flagged:hover { background: linear-gradient(90deg, var(--warn-soft) 0 3px, var(--surface-2) 3px); }
+
+td.rank {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 12px;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+  width: 34px;
+}
+td.score { width: 116px; }
+.scorebar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.scorebar .track {
+  flex: 1;
+  height: 5px;
+  background: var(--bar-track);
+  border-radius: 100px;
+  overflow: hidden;
+}
+.scorebar .fill { height: 100%; background: var(--bar); border-radius: 100px; }
+.scorebar .num {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 11.5px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-2);
+  width: 26px;
+  text-align: right;
+}
+td.price {
+  font-family: Archivo, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: -.01em;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  width: 68px;
+}
+td.gpu { min-width: 150px; }
+td.gpu .name { font-weight: 500; }
+td.cpu { min-width: 132px; }
+td.ram {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  width: 62px;
+}
+td.sto { min-width: 190px; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 12px; }
+td.loc { min-width: 132px; }
+td.loc .km {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 11.5px;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+}
+td.note { min-width: 210px; font-size: 12.5px; color: var(--ink-2); }
+td.link { width: 52px; }
+
+.chip {
+  display: inline-block;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+.chip.ample { background: var(--ok-soft); color: var(--ok); }
+.chip.suffisant { background: var(--accent-soft); color: var(--accent-ink); }
+.chip.juste { background: var(--warn-soft); color: var(--warn); }
+.chip.small { background: var(--warn-soft); color: var(--warn); }
+.chip.unknown { background: var(--surface-3); color: var(--ink-3); }
+.chip.pro { background: var(--accent-soft); color: var(--accent-ink); }
+.chip.old { background: var(--warn-soft); color: var(--warn); }
+.chip.ok { background: var(--ok-soft); color: var(--ok); }
+
+.dim { color: var(--ink-3); }
+.empty {
+  padding: 34px 16px;
+  text-align: center;
+  color: var(--ink-3);
+  font-size: 14px;
+}
+
+/* ---------- excluded ---------- */
+
+.excl {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(288px, 1fr));
+  gap: 1px;
+  background: var(--line-soft);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.excl div {
+  background: var(--surface);
+  padding: 12px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.excl .top {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+.excl .top b { font-family: Archivo, sans-serif; font-size: 14px; }
+.excl .top span { color: var(--ink-3); }
+.excl .reason { font-size: 13px; color: var(--crit); }
+
+/* ---------- method ---------- */
+
+.method {
+  border-top: 1px solid var(--line);
+  margin-top: 60px;
+  padding-top: 26px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 26px;
+}
+.method h3 {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin: 0 0 7px;
+}
+.method p { margin: 0 0 9px; font-size: 13.5px; color: var(--ink-2); max-width: 52ch; }
+.method p:last-child { margin-bottom: 0; }
+.method code {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 12.5px;
+  background: var(--surface-3);
+  padding: 1px 5px;
+  border-radius: 2px;
+  color: var(--ink);
+}
+
+a { color: var(--accent); }
+a:focus-visible, .toggle:focus-visible, th:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
+@media (max-width: 620px) {
+  .brief div { flex-basis: 50%; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="eyebrow">leboncoin · 25 août 2026 · 40 km autour de Mornant</div>
+    <h1>Une tour gaming pour ado, entre 300 et 400 €</h1>
+    <p class="standfirst">61 tours de jeu vendues autour de Mornant, dépouillées annonce par annonce et classées au rapport puissance GPU / prix. Pour Fortnite, Roblox, Minecraft et Les Sims en 1080p, presque toutes les cartes de ce tableau suffisent — ce qui départage vraiment, c&rsquo;est la taille du SSD, la quantité de RAM et l&rsquo;âge du processeur.</p>
+    <dl class="brief">
+      <div><dt>Budget</dt><dd>300 – 400 €</dd></div>
+      <div><dt>Fourchette scrutée</dt><dd>250 – 450 €</dd></div>
+      <div><dt>Annonces lues</dt><dd>190</dd></div>
+      <div><dt>Retenues</dt><dd>61</dd></div>
+      <div><dt>Écartées</dt><dd>12</dd></div>
+    </dl>
+  </header>
+
+  <section>
+    <h2>Les quatre à contacter en premier</h2>
+    <p class="sec-note">Le classement brut récompense la puissance par euro. Ces quatre-là intègrent en plus ce qui compte pour l&rsquo;usage réel : un SSD assez grand, 16 Go de RAM, un processeur pas trop daté et un trajet raisonnable.</p>
+    <div class="picks" id="picks"></div>
+  </section>
+
+  <section>
+    <h2>Classement complet <span class="count" id="tcount"></span></h2>
+    <p class="sec-note">Trié par défaut sur le score puissance/prix. Cliquez un en-tête pour changer de tri. La barre orange à gauche d&rsquo;une ligne signale un stockage problématique : SSD sous 500 Go, disque dur seul, ou capacité non annoncée.</p>
+    <div class="controls">
+      <span class="lbl">Filtres</span>
+      <label class="toggle"><input type="checkbox" id="f-sto"> SSD ≥ 500 Go garanti</label>
+      <label class="toggle"><input type="checkbox" id="f-ram"> 16 Go de RAM mini</label>
+      <label class="toggle"><input type="checkbox" id="f-km"> À moins de 25 km</label>
+      <label class="toggle"><input type="checkbox" id="f-cpu"> Processeur récent</label>
+      <label class="toggle"><input type="checkbox" id="f-budget"> Dans le budget 300–400 €</label>
+    </div>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th class="sortable" data-k="score">Score<span class="arrow">▾</span></th>
+            <th class="sortable" data-k="price">Prix<span class="arrow">▾</span></th>
+            <th class="sortable" data-k="idx">Carte graphique<span class="arrow">▾</span></th>
+            <th>Processeur</th>
+            <th class="sortable" data-k="ram">RAM<span class="arrow">▾</span></th>
+            <th>Stockage</th>
+            <th class="sortable" data-k="km">Ville<span class="arrow">▾</span></th>
+            <th>Remarques</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Écartées <span class="count">12 annonces</span></h2>
+    <p class="sec-note">Ces annonces sortaient des critères : vendues, sans SSD, sans liste de composants exploitable, ou avec une carte graphique qui n&rsquo;est pas une carte de jeu.</p>
+    <div class="excl" id="excl"></div>
+  </section>
+
+  <div class="method">
+    <div>
+      <h3>Le score</h3>
+      <p><code>indice GPU ÷ prix × 1000</code>. L&rsquo;indice GPU est une échelle de performance relative en 1080p (RX 460 = 18, GTX 1060 6 Go = 45, GTX 1660 = 57, RTX 2060 = 72, RTX 3060 = 95). Un score de 200 veut dire « beaucoup de carte graphique pour l&rsquo;argent », pas « bonne machine » : un SSD de 120 Go ou un processeur de 2012 ne pénalisent pas le score, ils apparaissent en remarque.</p>
+    </div>
+    <div>
+      <h3>Le confort de jeu</h3>
+      <p>La pastille à côté de la carte graphique situe les quatre jeux visés en 1080p. <span class="chip ample">ample</span> tient largement et gardera de la marge ; <span class="chip suffisant">suffisant</span> fait tourner les quatre jeux sans souci ; <span class="chip juste">juste</span> passe mais sans réserve, surtout sur Fortnite.</p>
+    </div>
+    <div>
+      <h3>La distance</h3>
+      <p>Calculée à vol d&rsquo;oiseau depuis Mornant (45.618 N, 4.668 E) d&rsquo;après les coordonnées de l&rsquo;annonce. Comptez 20 à 40 % de plus par la route, et sachez que leboncoin ne donne que la commune, pas l&rsquo;adresse.</p>
+    </div>
+    <div>
+      <h3>Ce que le tableau ne dit pas</h3>
+      <p>Les composants viennent de la description rédigée par le vendeur : ni vérifiés, ni testés. « Non précisé » veut dire que l&rsquo;annonce reste muette — à demander avant de se déplacer, au même titre que la marque de l&rsquo;alimentation et l&rsquo;état des ventilateurs.</p>
+      <p>14 autres annonces conformes existent entre 430 et 450 €, hors budget, et ne sont pas listées.</p>
+    </div>
+  </div>
+
+</div>
+
+<script>
+const GPU_TIER = i => i >= 57 ? "ample" : i >= 38 ? "suffisant" : "juste";
+
+const ROWS = [
+  {id:3256284454, p:400, cpu:"Ryzen 5 3600", old:0, gpu:"RTX 3060 12 Go", idx:95, ram:8, sto:"SSD 1 To", sf:"ok", city:"Saint-Priest", km:22, pro:0, note:"Le meilleur GPU du lot, et de loin. Seulement 8 Go de RAM : prévoir une barrette."},
+  {id:2997676155, p:300, cpu:"Core i5-8600K", old:0, gpu:"GTX 1070 Ti 8 Go", idx:70, ram:16, sto:"SSD 500 Go + HDD 2 To", sf:"ok", city:"Lyon", km:20, pro:0, note:"Tout coche : 6 cœurs récents, SSD suffisant, 100 € sous le haut du budget. Sans écran ni périphériques."},
+  {id:3254605133, p:350, cpu:"Ryzen 7 1700X", old:0, gpu:"GTX 1080 8 Go", idx:78, ram:16, sto:"SSD 1 To + HDD 2 To", sf:"ok", city:"Lyon", km:21, pro:0, note:"8 cœurs, 3 To de stockage. Vendu sans câble d'alimentation."},
+  {id:2957405301, p:350, cpu:"Core i7-6700", old:1, gpu:"GTX 1080 8 Go", idx:78, ram:16, sto:"SSD 256 Go", sf:"small", city:"Villefranche-sur-Saône", km:41, pro:0, note:"Grosse carte, petit SSD, et 41 km de route."},
+  {id:2978150166, p:285, cpu:"Core i5-3570K", old:1, gpu:"GTX 1070 8 Go", idx:62, ram:16, sto:"SSD 120 Go + HDD 1 To", sf:"small", city:"Lyon", km:20, pro:0, note:"Processeur de 2012 en 4 cœurs / 4 threads : c'est lui qui bridera Fortnite, pas la carte."},
+  {id:3182093490, p:300, cpu:"Core i5-7500", old:1, gpu:"GTX 1660 Ti 6 Go", idx:65, ram:16, sto:"SSD 400 Go", sf:"small", city:"Bourgoin-Jallieu", km:48, pro:0, note:"Excellent rapport, mais 4 cœurs / 4 threads et le trajet le plus long du tableau."},
+  {id:3141475341, p:300, cpu:"Core i7-4790K", old:1, gpu:"GTX 1070 8 Go", idx:62, ram:16, sto:"SSD 250 Go", sf:"small", city:"Genas", km:29, pro:0, note:"Tour seule, alimentation 650 W, mémoire DDR3."},
+  {id:3144825704, p:350, cpu:"Core i5-9400F", old:0, gpu:"RTX 2060 6 Go", idx:72, ram:32, sto:"SSD 447 Go + HDD 1,8 To", sf:"small", city:"Pont-de-Chéruy", km:41, pro:0, note:"32 Go de RAM, SSD qui manque 53 Go pour cocher la case."},
+  {id:3239770162, p:370, cpu:"Core i7-6700K", old:1, gpu:"RTX 2060 6 Go", idx:72, ram:16, sto:"SSD 240 Go + HDD 1 To", sf:"small", city:"Lyon", km:21, pro:1, note:"Reconditionné pro, garanti 1 an. Passage en SSD 480 Go proposé à +40 €."},
+  {id:3236701870, p:325, cpu:"Core i5-10600K", old:0, gpu:"GTX 1070 8 Go", idx:62, ram:16, sto:"SSD 1 To + HDD 1 To", sf:"ok", city:"Saint-Just-Saint-Rambert", km:36, pro:0, note:"Le processeur le plus récent à ce niveau de prix. 36 km."},
+  {id:3191674127, p:340, cpu:"Core i5-7400", old:1, gpu:"GTX 1660 Ti 6 Go", idx:65, ram:12, sto:"SSD 512 Go (2×256)", sf:"ok", city:"Lyon", km:21, pro:1, note:"Vendeur pro. 12 Go de RAM et un CPU 4 cœurs / 4 threads."},
+  {id:3254002831, p:300, cpu:"Core i5-9400F", old:0, gpu:"GTX 1660 6 Go", idx:57, ram:16, sto:"SSD 256 Go + HDD 500 Go", sf:"small", city:"Givors", km:9, pro:0, note:"La plus proche de Mornant. Un SSD de 1 To à 50 € en fait la machine idéale."},
+  {id:3218908440, p:350, cpu:"Ryzen 3 3200G", old:0, gpu:"GTX 1660 Super 6 Go", idx:63, ram:16, sto:"NVMe, capacité non annoncée", sf:"unknown", city:"Saint-Étienne", km:30, pro:0, note:"CPU 4 cœurs mais récent. Demander la taille du NVMe."},
+  {id:3100345624, p:349, cpu:"Core i7-7700", old:1, gpu:"GTX 1070 8 Go", idx:62, ram:16, sto:"Non annoncé", sf:"unknown", city:"Saint-Symphorien-d'Ozon", km:15, pro:0, note:"Annonce recopiée d'une fiche constructeur : aucun disque mentionné, deux ports M.2 libres."},
+  {id:3199347989, p:360, cpu:"Core i7-7700", old:1, gpu:"GTX 1660 Super 6 Go", idx:63, ram:16, sto:"SSD 512 Go + HDD 1 To", sf:"ok", city:"Lyon", km:21, pro:1, note:"Reconditionné par un pro : la carte la plus sûre du tableau si la garantie compte."},
+  {id:3116072864, p:340, cpu:"Core i7-6700K", old:1, gpu:"GTX 980 Ti 6 Go", idx:58, ram:16, sto:"Non annoncé", sf:"unknown", city:"Villeurbanne", km:24, pro:0, note:"Écran Asus VG248QE 144 Hz inclus dans le prix. Stockage à faire préciser."},
+  {id:3254975076, p:399, cpu:"Ryzen 7 1700X", old:0, gpu:"RTX 3050", idx:68, ram:16, sto:"SSD 1 To PNY", sf:"ok", city:"Saint-Priest", km:22, pro:0, note:"Alimentation be quiet! 600 W, carte RTX compatible DLSS. Rien à reprendre."},
+  {id:3228023881, p:430, cpu:"Core i5-9400F", old:0, gpu:"RTX 2060 6 Go", idx:72, ram:16, sto:"NVMe 512 Go", sf:"ok", city:"Lyon", km:21, pro:1, note:"Reconditionné pro, alim be quiet! 600 W Bronze. 30 € au-dessus du budget."},
+  {id:3255677220, p:400, cpu:"Core i7-10700F", old:0, gpu:"GTX 1660 Super 6 Go", idx:63, ram:16, sto:"SSD 500 Go", sf:"ok", city:"Saint-Étienne", km:29, pro:0, note:"8 cœurs / 16 threads : le processeur le plus costaud du tableau."},
+  {id:3140023840, p:400, cpu:"Core i5-4440", old:1, gpu:"GTX 1660 Super 6 Go", idx:63, ram:16, sto:"SSD 480 Go + HDD 1 To", sf:"small", city:"Sablons", km:34, pro:0, note:"Bonne carte plombée par un processeur de 2013 en 4 cœurs / 4 threads."},
+  {id:3125951859, p:400, cpu:"Core i7-6700", old:1, gpu:"GTX 1070 8 Go", idx:62, ram:16, sto:"SSD 256 Go + HDD 1 To", sf:"small", city:"Villefontaine", km:37, pro:0, note:"Machine de marque, alimentation externe d'origine."},
+  {id:3227447367, p:370, cpu:"Ryzen 5 2600X", old:0, gpu:"GTX 1660 6 Go", idx:57, ram:16, sto:"SSD 256 Go + HDD 1 To", sf:"small", city:"Givors", km:9, pro:0, note:"L'autre annonce à 9 km. SSD Samsung 830 un peu juste et vieillissant."},
+  {id:3177694043, p:340, cpu:"Core i5-10400F", old:0, gpu:"RX 5500 XT", idx:52, ram:16, sto:"SSD 1 To", sf:"ok", city:"Lyon", km:21, pro:0, note:"Configuration récente et cohérente, annonce laconique."},
+  {id:3206699556, p:340, cpu:"Ryzen 5 3600X", old:0, gpu:"GTX 1650 Super", idx:52, ram:16, sto:"SSD 512 Go", sf:"ok", city:"Lyon", km:21, pro:0, note:"Coche tous les critères durs sans exception. Carte modeste mais large pour ces jeux."},
+  {id:3252985709, p:300, cpu:"Ryzen 5 2400", old:0, gpu:"RX 580 8 Go", idx:46, ram:16, sto:"SSD 500 Go (neuf)", sf:"ok", city:"Vienne", km:19, pro:0, note:"SSD annoncé neuf, alimentation 600 W."},
+  {id:3252987139, p:300, cpu:"Ryzen 5", old:0, gpu:"RX 580 8 Go", idx:46, ram:null, sto:"SSD NVMe, capacité non annoncée", sf:"unknown", city:"Vienne", km:19, pro:0, note:"Annonce jumelle de la précédente, même vendeur : c'est probablement la même machine."},
+  {id:3159586166, p:300, cpu:"Core i5 (réf. incohérente)", old:1, gpu:"GTX 980 4 Go", idx:45, ram:null, sto:"SSD 256 Go + SSD 500 Go", sf:"ok", city:"Annonay", km:42, pro:0, note:"Le vendeur écrit « i5 5500 », qui n'existe pas. 756 Go de SSD, aucun disque mécanique."},
+  {id:2974967855, p:300, cpu:"Core i5-8600K", old:0, gpu:"GTX 980 4 Go", idx:45, ram:16, sto:"SSD Samsung, capacité non annoncée", sf:"unknown", city:"Saint-Étienne", km:29, pro:0, note:"Très bon processeur. Carte de 2014, sans DLSS ni ray-tracing."},
+  {id:3048568405, p:300, cpu:"Core i5-8400", old:0, gpu:"GTX 1060 6 Go", idx:45, ram:16, sto:"SSD 480 Go + HDD 2 To", sf:"small", city:"Lentilly", km:23, pro:0, note:"Le titre annonce une GTX 1660, la description une 1060 : à clarifier. Écran 144 Hz inclus."},
+  {id:3243737866, p:299, cpu:"Core i5-8400", old:0, gpu:"GTX 1060 6 Go", idx:45, ram:8, sto:"SSD + HDD ≈ 1,1 To (part SSD inconnue)", sf:"unknown", city:"Mions", km:23, pro:0, note:"MSI Aegis 3 sous Windows 11. Le vendeur ne donne que le total."},
+  {id:3245620448, p:299, cpu:"Core i5-3470", old:1, gpu:"GTX 1060 6 Go", idx:45, ram:8, sto:"SSD Crucial MX100 512 Go", sf:"ok", city:"Lyon", km:20, pro:0, note:"Clavier et souris Corsair inclus. Processeur de 2012 en 4 cœurs / 4 threads."},
+  {id:3235918348, p:400, cpu:"Core i7-9700", old:0, gpu:"GTX 1660 6 Go", idx:57, ram:16, sto:"SSD 223 Go + HDD 931 Go", sf:"small", city:"Oullins-Pierre-Bénite", km:15, pro:0, note:"Proche, 8 cœurs, annonce très détaillée — seul le SSD déçoit."},
+  {id:3215548402, p:400, cpu:"Core i5-6400", old:1, gpu:"GTX 1660 6 Go", idx:57, ram:8, sto:"SSD 447 Go", sf:"small", city:"Vénissieux", km:19, pro:0, note:"4 cœurs / 4 threads et 8 Go de RAM pour 400 € : cher payé."},
+  {id:3130516712, p:315, cpu:"Core i5-8600", old:0, gpu:"GTX 1060 6 Go", idx:45, ram:16, sto:"SSD NVMe 500 Go + HDD 1 To", sf:"ok", city:"Lyon", km:20, pro:0, note:"Aucun défaut : 6 cœurs récents, SSD NVMe de 500 Go, 16 Go, et 315 €."},
+  {id:3198735866, p:350, cpu:"Ryzen 5", old:0, gpu:"RX 6500 XT", idx:50, ram:32, sto:"SSD 100 Go", sf:"small", city:"Rive-de-Gier", km:11, pro:0, note:"Deux vis manquantes, carte mère à rebrancher, et le vendeur reconnaît « presque pas d'espace de stockage »."},
+  {id:3216421211, p:275, cpu:"Core i7-4790K", old:1, gpu:"GTX 1650 4 Go", idx:38, ram:16, sto:"SSD Samsung 980 1 To", sf:"ok", city:"Bron", km:23, pro:0, note:"Le vendeur cite lui-même Fortnite et Minecraft. Mémoire DDR3, 1 To de SSD."},
+  {id:3045572242, p:300, cpu:"Core i7-3770K", old:1, gpu:"RX 570 4 Go", idx:40, ram:32, sto:"SSD 256 Go + HDD 1 To", sf:"small", city:"Rillieux-la-Pape", km:29, pro:0, note:"32 Go de DDR3. Le vendeur ne sait pas encore quelle alimentation il a."},
+  {id:3101972112, p:295, cpu:"Non annoncé", old:1, gpu:"GTX 970 4 Go", idx:38, ram:16, sto:"SSD 250 Go + HDD 1 To", sf:"small", city:"Fontaines-Saint-Martin", km:29, pro:0, note:"Aucun processeur annoncé, et une alimentation de 280 à 400 W un peu limite."},
+  {id:3218084329, p:350, cpu:"Ryzen 7 1700X", old:0, gpu:"GTX 1060 6 Go", idx:45, ram:16, sto:"SSD 1 To + SSD 250 Go + HDD 1 To", sf:"ok", city:"Lyon", km:19, pro:0, note:"8 cœurs et 2,25 To dont 1,25 To de SSD."},
+  {id:3243685668, p:360, cpu:"Ryzen 5", old:0, gpu:"RX 580 8 Go", idx:46, ram:8, sto:"SSD 128 Go", sf:"small", city:"Lucenay", km:33, pro:0, note:"Le vendeur cible explicitement Fortnite et Rocket League, mais 128 Go ne suffiront pas."},
+  {id:3039647559, p:300, cpu:"Non annoncé", old:1, gpu:"GTX 970 4 Go", idx:38, ram:16, sto:"SSD 222 Go", sf:"small", city:"Lyon", km:20, pro:0, note:"Aucun processeur annoncé. Alimentation Corsair 650 W, échanges acceptés."},
+  {id:3110848865, p:350, cpu:"Core i5-10400", old:0, gpu:"RX 480 8 Go", idx:44, ram:16, sto:"SSD NVMe 2 To", sf:"ok", city:"Lyon", km:20, pro:0, note:"Le meilleur stockage et la meilleure alimentation du tableau (Corsair RM750x). Carte de 2016."},
+  {id:3245620291, p:369, cpu:"Core i7-7700", old:1, gpu:"GTX 1060 6 Go", idx:45, ram:8, sto:"SSD 128 Go + HDD 1 To", sf:"small", city:"Morancé", km:31, pro:0, note:"8 Go de RAM et 128 Go de SSD pour 369 €."},
+  {id:3038372291, p:430, cpu:"Ryzen 5 5500", old:0, gpu:"GTX 1650 Super", idx:52, ram:16, sto:"SSD 250 Go + HDD 1 To", sf:"small", city:"Saint-Chamond", km:20, pro:0, note:"Processeur récent, mais 30 € au-dessus du budget et un SSD de 250 Go."},
+  {id:3251053651, p:360, cpu:"Ryzen 5 5600G", old:0, gpu:"RX 6400", idx:42, ram:16, sto:"SSD 128 Go", sf:"small", city:"Chassieu", km:27, pro:0, note:"Processeur récent, mais la RX 6400 est faible et 128 Go tiennent à peine Windows et deux jeux."},
+  {id:3222614988, p:400, cpu:"Ryzen 3 3300X", old:0, gpu:"RX 580 8 Go", idx:46, ram:16, sto:"SSD 240 Go", sf:"small", city:"Lyon", km:21, pro:0, note:"Base MEGAPORT dont le vendeur a changé carte, processeur, mémoire et alimentation."},
+  {id:3180228962, p:350, cpu:"Xeon E5-2630 v2", old:1, gpu:"RX 570 4 Go", idx:40, ram:16, sto:"Non annoncé", sf:"unknown", city:"Vénissieux", km:19, pro:0, note:"Xeon de serveur de 2013 : beaucoup de cœurs lents, mauvais pour le jeu."},
+  {id:3197856522, p:400, cpu:"Ryzen 5 2600X", old:0, gpu:"GTX 1060 6 Go", idx:45, ram:16, sto:"SSD, capacité non annoncée", sf:"unknown", city:"Bron", km:23, pro:0, note:"Configuration correcte, prix haut pour ce qu'elle offre."},
+  {id:3245058687, p:400, cpu:"Ryzen 5 PRO 4650G", old:0, gpu:"GTX 1650 4 Go", idx:38, ram:8, sto:"SSD SATA 480 Go", sf:"small", city:"Chazelles-sur-Lyon", km:22, pro:0, note:"8 Go de RAM et une GTX 1650 pour 400 € : le plus mauvais rapport du haut de fourchette."},
+  {id:3083484901, p:400, cpu:"Ryzen 5 4600G", old:0, gpu:"GTX 1650 4 Go", idx:38, ram:16, sto:"Description contradictoire", sf:"unknown", city:"Lyon", km:21, pro:0, note:"L'annonce mélange « disque dur 128 Go SSD » et 1 To : à faire préciser."},
+  {id:3155397748, p:300, cpu:"Core i5-4460", old:1, gpu:"GTX 960 2 Go", idx:28, ram:8, sto:"SSD 128 Go + HDD 1 To", sf:"small", city:"Lyon", km:21, pro:0, note:"Le vendeur promet Fortnite, Roblox et Minecraft, mais carte et processeur datent de 2014."},
+  {id:3147570941, p:415, cpu:"Ryzen 5 3600", old:0, gpu:"GTX 1650 4 Go", idx:38, ram:16, sto:"SSD 240 Go + HDD 2 To", sf:"small", city:"Saint-Genis-Laval", km:13, pro:0, note:"Très proche et bon processeur, mais 415 € pour une GTX 1650 c'est trop."},
+  {id:3113172099, p:270, cpu:"Ryzen 5 2600", old:0, gpu:"RX 460", idx:18, ram:16, sto:"SSD 250 Go + HDD 1 To", sf:"small", city:"Lyon", km:21, pro:0, note:"La RX 460 rame déjà sur Fortnite : la seule carte du tableau vraiment insuffisante."},
+  {id:2971024197, p:420, cpu:"Xeon E3-1240 v2", old:1, gpu:"GTX 770 2 Go", idx:24, ram:32, sto:"SSD Samsung, capacité non annoncée", sf:"unknown", city:"Lyon", km:21, pro:0, note:"Plateforme de 2012 et carte de 2013 pour 420 €. À laisser passer."},
+  {id:3161782749, p:310, cpu:"Ryzen 5 2600", old:0, gpu:"GTX 1660 Super 6 Go", idx:63, ram:16, sto:"Non annoncé — Windows à installer", sf:"unknown", city:"Saint-Étienne", km:29, pro:0, note:"Très bon matériel au bon prix, mais rien sur le disque : à vérifier avant tout le reste."},
+  {id:3164510012, p:250, cpu:"Core i7-4790K", old:1, gpu:"GTX 970 4 Go", idx:38, ram:16, sto:"SSD Samsung 850 EVO 500 Go", sf:"ok", city:"Villeurbanne", km:24, pro:0, note:"Sous le budget et tout coche : SSD 500 Go, 16 Go, alimentation Seasonic 650 W."},
+  {id:3083564477, p:250, cpu:"Ryzen 3 2200G", old:1, gpu:"RX 570 4 Go", idx:40, ram:16, sto:"2 × SSD 500 Go (1 To)", sf:"ok", city:"Villefranche-sur-Saône", km:41, pro:0, note:"1 To en SSD pour 250 €. Processeur 4 cœurs / 4 threads, alimentation de marque obscure."},
+  {id:3188067356, p:250, cpu:"Ryzen 5 1600", old:0, gpu:"GTX 1060 6 Go", idx:45, ram:16, sto:"SSD 256 Go + HDD 1 To", sf:"small", city:"Villeurbanne", km:24, pro:0, note:"6 cœurs et une GTX 1060 pour 250 € : il ne manque que du SSD."},
+  {id:3003263646, p:250, cpu:"Core i7-6700K", old:1, gpu:"GTX 1060", idx:45, ram:16, sto:"SSD 117 Go + HDD 1,81 To", sf:"small", city:"Caluire-et-Cuire", km:24, pro:0, note:"Tour complète. Le vendeur donne l'espace libre plutôt que les capacités."},
+  {id:3234109131, p:250, cpu:"Xeon 6 cœurs (non identifié)", old:1, gpu:"RX 580 8 Go", idx:46, ram:8, sto:"Non annoncé", sf:"unknown", city:"Villeurbanne", km:24, pro:0, note:"Tour Provonto annoncée à l'état neuf, mais le Xeon n'est pas identifié et le disque pas mentionné."},
+  {id:3203006261, p:250, cpu:"Core i5-6500T", old:1, gpu:"GTX 1050 Ti 4 Go", idx:26, ram:16, sto:"SSD 250 Go + HDD 1 To", sf:"small", city:"Lyon", km:21, pro:1, note:"Reconditionné pro garanti 1 an. Le « T » est une version basse consommation, donc bridée."}
+];
+
+const EXCLUDED = [
+  {p:320, city:"Bron", why:"Annonce marquée VENDU"},
+  {p:400, city:"Bron", why:"Annonce marquée VENDU"},
+  {p:430, city:"Lyon", why:"Annonce marquée VENDU"},
+  {p:400, city:"Andrézieux-Bouthéon", why:"« Aucun SSD fourni », Windows absent"},
+  {p:300, city:"Villefranche-sur-Saône", why:"Ni SSD ni disque dur"},
+  {p:399, city:"Tarare", why:"« Vendu sans SSD ni disque dur »"},
+  {p:250, city:"Rillieux-la-Pape", why:"SSD non inclus, deux processeurs annoncés"},
+  {p:399, city:"Lyon", why:"GT 730 : ce n'est pas une carte de jeu"},
+  {p:350, city:"Saint-Forgeux", why:"Annoncée « à réparer »"},
+  {p:295, city:"Lucenay", why:"Stockage « sur demande »"},
+  {p:300, city:"Vénissieux", why:"Aucun processeur annoncé"},
+  {p:400, city:"Anse", why:"Aucun processeur annoncé"}
+];
+
+const PICKS = [
+  {role:"Le meilleur achat", id:2997676155, p:300, city:"Lyon", km:20,
+   conf:"Core i5-8600K · GTX 1070 Ti 8 Go<br>16 Go · SSD 500 Go + HDD 2 To",
+   why:"La seule machine du tableau qui ne demande aucune dépense complémentaire, et elle laisse 100 € de marge dans le budget. Six cœurs de 2017, une carte largement au-dessus des besoins de ces quatre jeux, un SSD à la bonne taille.",
+   caveat:"Vendue nue : ni écran ni clavier."},
+  {role:"La plus proche", id:3254002831, p:300, city:"Givors", km:9,
+   conf:"Core i5-9400F · GTX 1660 6 Go<br>16 Go · SSD 256 Go + HDD 500 Go",
+   why:"Neuf kilomètres, donc un essai sur place facile et un retour possible si un problème apparaît. Le processeur et la carte sont exactement dans la cible.",
+   caveat:"SSD de 256 Go : ajouter un 1 To (≈ 50 €) pour arriver à 350 € au total."},
+  {role:"La plus durable", id:3256284454, p:400, city:"Saint-Priest", km:22,
+   conf:"Ryzen 5 3600 · RTX 3060 12 Go<br>8 Go · SSD 1 To",
+   why:"La seule carte du lot qui tiendra encore dans quatre ou cinq ans, avec 12 Go de mémoire vidéo et le DLSS. Le choix à faire si l'ado joue déjà à autre chose que ces quatre titres.",
+   caveat:"8 Go de RAM seulement : une barrette de 8 Go coûte ≈ 25 €."},
+  {role:"La plus sûre", id:3199347989, p:360, city:"Lyon", km:21,
+   conf:"Core i7-7700 · GTX 1660 Super 6 Go<br>16 Go · SSD 512 Go + HDD 1 To",
+   why:"Reconditionnée par un vendeur professionnel, donc testée, avec facture et garantie — le recours qui manque à toutes les ventes entre particuliers de cette liste.",
+   caveat:"Processeur de 2017 en 4 cœurs / 8 threads."}
+];
+
+const url = id => "https://www.leboncoin.fr/ad/ordinateurs/" + id;
+ROWS.forEach(r => { r.score = Math.round(r.idx / r.p * 1000); });
+const MAXSCORE = Math.max(...ROWS.map(r => r.score));
+
+/* ---- picks ---- */
+document.getElementById("picks").innerHTML = PICKS.map(k => `
+  <article class="pick">
+    <div class="role">${k.role}</div>
+    <div class="headline">
+      <div class="price">${k.p} €</div>
+      <div class="where">${k.city}<br>${k.km} km</div>
+    </div>
+    <p class="conf">${k.conf}</p>
+    <p class="why">${k.why}</p>
+    <p class="caveat"><b>Réserve —</b><span>${k.caveat}</span></p>
+    <a class="go" href="${url(k.id)}" target="_blank" rel="noopener">Voir l'annonce</a>
+  </article>`).join("");
+
+/* ---- excluded ---- */
+document.getElementById("excl").innerHTML = EXCLUDED.map(e => `
+  <div>
+    <div class="top"><b>${e.p} €</b><span>${e.city}</span></div>
+    <div class="reason">${e.why}</div>
+  </div>`).join("");
+
+/* ---- table ---- */
+const STO_LABEL = {ok:"", small:"&lt; 500 Go", unknown:"à confirmer"};
+let sortKey = "score", sortDir = -1;
+
+const filters = {
+  "f-sto": r => r.sf === "ok",
+  "f-ram": r => r.ram !== null && r.ram >= 16,
+  "f-km":  r => r.km <= 25,
+  "f-cpu": r => !r.old,
+  "f-budget": r => r.p >= 300 && r.p <= 400
+};
+
+function render() {
+  const active = Object.entries(filters).filter(([id]) => document.getElementById(id).checked);
+  let rows = ROWS.filter(r => active.every(([, fn]) => fn(r)));
+
+  rows.sort((a, b) => {
+    const av = a[sortKey], bv = b[sortKey];
+    const an = av === null ? -Infinity : av, bn = bv === null ? -Infinity : bv;
+    return an === bn ? a.score - b.score : (an - bn) * sortDir;
+  });
+
+  document.getElementById("tcount").textContent =
+    rows.length === ROWS.length ? `${ROWS.length} annonces` : `${rows.length} sur ${ROWS.length}`;
+
+  const tb = document.getElementById("tbody");
+  if (!rows.length) {
+    tb.innerHTML = `<tr><td colspan="10" class="empty">Aucune annonce ne passe tous ces filtres à la fois. Relâchez-en un.</td></tr>`;
+    return;
+  }
+
+  tb.innerHTML = rows.map((r, i) => {
+    const tier = GPU_TIER(r.idx);
+    const stoChip = r.sf === "ok" ? "" : ` <span class="chip ${r.sf}">${STO_LABEL[r.sf]}</span>`;
+    return `<tr class="${r.sf === "ok" ? "" : "flagged"}">
+      <td class="rank">${i + 1}</td>
+      <td class="score"><div class="scorebar">
+        <div class="track"><div class="fill" style="width:${Math.round(r.score / MAXSCORE * 100)}%"></div></div>
+        <div class="num">${r.score}</div>
+      </div></td>
+      <td class="price">${r.p} €</td>
+      <td class="gpu"><span class="name">${r.gpu}</span> <span class="chip ${tier}">${tier}</span></td>
+      <td class="cpu">${r.cpu}${r.old ? ' <span class="chip old">daté</span>' : ""}</td>
+      <td class="ram">${r.ram === null ? '<span class="dim">n.c.</span>' : r.ram + " Go"}</td>
+      <td class="sto">${r.sto}${stoChip}</td>
+      <td class="loc">${r.city}<br><span class="km">${r.km} km</span>${r.pro ? ' <span class="chip pro">pro</span>' : ""}</td>
+      <td class="note">${r.note}</td>
+      <td class="link"><a class="go" href="${url(r.id)}" target="_blank" rel="noopener">Voir</a></td>
+    </tr>`;
+  }).join("");
+}
+
+document.querySelectorAll("th.sortable").forEach(th => {
+  th.tabIndex = 0;
+  const act = () => {
+    const k = th.dataset.k;
+    if (sortKey === k) sortDir *= -1;
+    else { sortKey = k; sortDir = (k === "price" || k === "km") ? 1 : -1; }
+    document.querySelectorAll("th.sortable").forEach(o => o.removeAttribute("aria-sort"));
+    th.setAttribute("aria-sort", sortDir === 1 ? "ascending" : "descending");
+    th.querySelector(".arrow").textContent = sortDir === 1 ? "▴" : "▾";
+    render();
+  };
+  th.addEventListener("click", act);
+  th.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); act(); } });
+});
+
+Object.keys(filters).forEach(id =>
+  document.getElementById(id).addEventListener("change", render));
+
+document.querySelector('th.sortable[data-k="score"]').setAttribute("aria-sort", "descending");
+render();
+</script>
+</body>
+</html>
