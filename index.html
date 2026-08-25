@@ -991,7 +991,7 @@ document.querySelectorAll("th.sortable").forEach(th => {
   const act = () => {
     const k = th.dataset.k;
     if (sortKey === k) sortDir *= -1;
-    else { sortKey = k; sortDir = (k === "price" || k === "km") ? 1 : -1; }
+    else { sortKey = k; sortDir = (k === "price" || k === "km" || k === "age") ? 1 : -1; }
     document.querySelectorAll("th.sortable").forEach(o => o.removeAttribute("aria-sort"));
     th.setAttribute("aria-sort", sortDir === 1 ? "ascending" : "descending");
     th.querySelector(".arrow").textContent = sortDir === 1 ? "▴" : "▾";
